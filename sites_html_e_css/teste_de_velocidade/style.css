@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+.nav-item .nav-link {
+    font-family: 'Open Sans', sans-serif;
+    color: #8730b6;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 7px;
+    font-size: 15px;
+}
+
+.container1 {
+    width: 100% !important;
+}
+
+.nav-item .nav-link:hover {
+    color: #8730b6;
+}
+
+.home {
+    height: 100vh;
+    width: 100%;
+    background: url("imgs/fundo.png");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+
+}
+
+.home-conteudo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-title {
+    font-weight: 700;
+    font-size: 65px;
+    color: #fff;
+}
+
+.home-p {
+    font-size: 25px;
+    color: #fff;
+}
+
+.conteudo .title {
+    color: #ebac00;
+}
+
+.conteudo_ .title {
+    color: #17c700;
+}
+
+.text-home {
+    margin-top: 11%;
+    display: block; 
+    text-align: center;
+}
+
+.btn-home {
+    background-color: #fff;
+    color: #000;
+    padding: 10px 70px 10px 70px;
+    border-color: #fff;
+    font-weight: 700;
+    transition:all 0.2s ease-in-out;
+}
+
+.btn-home:hover {
+    background-color: transparent;
+    color: #8730b6;
+    padding: 10px 70px 10px 70px;
+    border-color: #8730b6;
+    font-weight: 700;
+    border-radius: 50px;
+}
+
+.conteudo {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 32px 16px #000000;
+}
+
+
+.part-conteudo {
+    display: inline;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    padding: 50px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.part-conteudo p {
+    justify-content: center;
+    align-content: center;
+}
+
+.part-conteudo h1 {
+    color: #fff;
+}
+
+footer {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rodape {
+    display: block;
+    padding: 40px 0px 40px 0px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 15px;
+    color: #fff;
+}
+
+
+#btnTop {
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: rgb(240, 240, 240);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .arrow {
+      border: solid #0f0f0f; 
+      border-width: 0 7px 7px 0;
+      padding: 5px;
+      display: inline-block;
+    }
+
+    .up {
+      transform: rotate(-135deg);
+    }
+
+
+
+.modal {
+    display: none; /* Oculta o modal por padrão */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+  }
