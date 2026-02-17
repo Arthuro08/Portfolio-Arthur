@@ -2,7 +2,7 @@
 
 ## 📌 Descrição
 
-Projeto desenvolvido em C com o objetivo de validar uma data informada pelo usuário e calcular o dia seguinte.
+Solução desenvolvida em C com o objetivo de validar uma data informada pelo usuário e calcular o dia seguinte.
 
 O programa recebe três valores inteiros representando:
 

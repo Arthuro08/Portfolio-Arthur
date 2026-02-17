@@ -2,7 +2,7 @@
 
 ## 📌 Descrição
 
-Projeto desenvolvido em C para calcular o fatorial de números inteiros positivos.
+Solução desenvolvida em C para calcular o fatorial de números inteiros positivos.
 
 O programa recebe valores inteiros via entrada padrão e calcula o fatorial de cada número informado.  
 A execução continua até que o usuário digite `-1`, que encerra o programa.
