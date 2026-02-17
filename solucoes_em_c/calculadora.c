@@ -14,7 +14,7 @@ double calc(double x1, char operador, double x2){
 }
 
 int main(){
-    double x1, x2, n, result;
+    double x1, x2, result;
     char operador;
     printf("Digite a operação desejada:\n1. '+' para adição;\n2. '-' para subtração;\n3. '*' para multiplicação;\n4. '/' para divisão;\n5. 'e' para exponenciação;\n6. 'r' para radiciação.\n");
     printf("________________________________________________________________\nDigite a entrada: ");
