@@ -1,0 +1,134 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    background-image: url('imagens/fundo.jpg');
+    background-attachment: fixed; 
+    background-size: cover; 
+}
+
+header {
+    background-color: transparent;
+    color: white;
+}
+
+header h1 {
+    margin: 20px;
+    font-size: 20px;
+}
+
+div#principal {
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding-bottom: 150px;
+    padding-top: 70px;
+    
+}
+
+section#sobre{
+    padding: 40px 20px;
+    background-color: #000000;
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 400px; 
+    box-shadow: 0 0 70px 70px #000000;
+}
+
+.trajetoria .ifsp{
+    max-width: 100px;
+    height: auto;
+}
+
+.trajetoria .etec {
+    max-width: 100px;
+    height: auto;
+}
+
+.trajetoria p{
+    font-size: 15px;;
+}
+
+.trajetoria h2{
+    font-size: 20px;
+}
+
+.medio{
+    display: flex;
+}
+
+.superior{
+    display: flex;
+}
+
+.aboutme {
+    max-width: 400px;
+    line-height: 25px;
+}
+
+.trajetoria{
+    max-width: 400px;
+    line-height: 25px;
+}
+
+section#habilidades{
+    padding: 40px 20px;
+    background-color: aliceblue;
+}
+
+section#contato{
+    padding: 40px 20px;
+    background-color: aliceblue;
+}
+
+.lista-linguagens{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; 
+}
+
+.lista-linguagens li {
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(75, 123, 255);
+    color: rgb(75, 123, 255);
+}
+
+div#principal h2 {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+div#principal p {
+    padding-top: 10px;
+}
+
+div#principal h1 {
+    font-size: 40px;
+    background: -webkit-linear-gradient(#4b7bff, #103aad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.foto-perfil {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(75, 123, 255);
+}
+
+

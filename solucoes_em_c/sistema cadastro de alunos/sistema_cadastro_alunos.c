@@ -16,14 +16,19 @@ void cadastrar(registro_aluno aluno[], int *qtd){
     printf("Nome: ");
     scanf(" %49[^\n]", aluno[*qtd].nome);
     
-    printf("ID da Matrícula: ");
+    printf("ID da Matrícula (até 4 dígitos): ");
     scanf("%d", &aluno[*qtd].matricula);
     
     printf("Nota 1: ");
     scanf("%lf", &aluno[*qtd].nota1);
-    
+
     printf("Nota 2: ");
     scanf("%lf", &aluno[*qtd].nota2);
+    
+    if(aluno[*qtd].nota1 > 10 || aluno[*qtd].nota1 < 0 || aluno[*qtd].nota2 > 10 || aluno[*qtd].nota2 < 0 || aluno[*qtd].matricula > 9999){
+        printf("ERRO NO CADASTRO DO ALUNO! VERIFIQUE OS DADOS E TENTE NOVAMENTE.\n");
+        return;
+    }
     
     aluno[*qtd].media = (aluno[*qtd].nota1 + aluno[*qtd].nota2)/2;
     printf("\nCADASTRO EFETUADO COM SUCESSO!\n");
