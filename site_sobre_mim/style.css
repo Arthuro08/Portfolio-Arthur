@@ -1,11 +1,11 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #222;
     background-image: url('imagens/fundo.jpg');
     background-attachment: fixed; 
-    background-size: cover; 
+    background-size: cover;
 }
 
 header {
@@ -23,7 +23,7 @@ div#principal {
     color: white;
     text-align: center;
     padding-bottom: 150px;
-    padding-top: 70px;
+    padding-top: 20px;
     
 }
 
@@ -34,7 +34,7 @@ section#sobre{
     color: white;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 400px; 
+    gap: 200px; 
     box-shadow: 0 0 70px 70px #000000;
 }
 
@@ -50,10 +50,12 @@ section#sobre{
 
 .trajetoria p{
     font-size: 15px;;
+    padding-left: 10px;
 }
 
 .trajetoria h2{
     font-size: 20px;
+    padding-left: 10px;
 }
 
 .medio{
@@ -71,7 +73,7 @@ section#sobre{
 
 .trajetoria{
     max-width: 400px;
-    line-height: 25px;
+    padding-top: 40px;
 }
 
 section#habilidades{
