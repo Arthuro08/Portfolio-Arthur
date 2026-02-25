@@ -71,9 +71,19 @@ section#sobre{
     line-height: 25px;
 }
 
+.aboutme h2{
+    color:#4b7bff;
+}
+
 .trajetoria{
     max-width: 400px;
     padding-top: 40px;
+}
+
+.linha-vertical {
+    width: 4px;
+    height: 200px;
+    background: linear-gradient(to bottom, #4b7bff, #103aad);
 }
 
 section#habilidades{
