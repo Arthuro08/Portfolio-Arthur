@@ -59,10 +59,12 @@ section#sobre{
 
 .medio{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .superior{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .aboutme {
@@ -159,6 +161,7 @@ div#principal h1 {
 
 .flip-card-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px; 
     margin-top: 50px;
@@ -228,6 +231,7 @@ section#contato i {
       background-color: rgb(240, 240, 240);
       border-radius: 50%;
       display: flex;
+      flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
       justify-content: center;
@@ -245,5 +249,56 @@ section#contato i {
       transform: rotate(-135deg);
     }
 
+@media (max-width: 768px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    section#sobre {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px; 
+        text-align: center;
+    }
+
+    .trajetoria,
+    .aboutme {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .linha-vertical {
+        display: none;
+    }
+
+    div#principal h1 {
+        font-size: 28px;
+    }
+
+    div#principal h2 {
+        font-size: 16px;
+    }
+
+    .lista-linguagens {
+        gap: 10px;
+    }
+
+    .lista-linguagens li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    section#contato i {
+        font-size: 40px;
+        padding: 10px;
+    }
+
+    .flip-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
 
 
