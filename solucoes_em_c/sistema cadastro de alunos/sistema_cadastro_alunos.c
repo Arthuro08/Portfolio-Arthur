@@ -24,6 +24,13 @@ void cadastrar(registro_aluno aluno[], int *qtd){
 
     printf("Nota 2: ");
     scanf("%lf", &aluno[*qtd].nota2);
+
+    for(int i=0; i<*qtd; i++){
+        if(aluno[*qtd].matricula == aluno[i].matricula){
+            printf("MATRÍCULA JÁ CADASTRADA! VERIFIQUE OS DADOS E TENTE NOVAMENTE.\n");
+            return;
+        }
+    }
     
     if(aluno[*qtd].nota1 > 10 || aluno[*qtd].nota1 < 0 || aluno[*qtd].nota2 > 10 || aluno[*qtd].nota2 < 0 || aluno[*qtd].matricula > 9999){
         printf("ERRO NO CADASTRO DO ALUNO! VERIFIQUE OS DADOS E TENTE NOVAMENTE.\n");
