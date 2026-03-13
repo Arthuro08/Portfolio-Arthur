@@ -47,9 +47,9 @@ def recordes(nivelrecorde, recorde):
 
 while True:
     print("===== ADIVINHE O NÚMERO =====")
-    print("\n1 - Nível júnior")
-    print("2 - Nível pleno")
-    print("3 - Nível sênior")
+    print("\n1 - Nível júnior (1 a 50)")
+    print("2 - Nível pleno (1 a 100)")
+    print("3 - Nível sênior (1 a 500)")
     print("0 - Sair\n")
     try:
         dificuldade = int(input("Selecione a dificuldade (de 1 a 3): "))
