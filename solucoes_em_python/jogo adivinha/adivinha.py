@@ -65,7 +65,7 @@ def viewrecordes():
     try:
         with open("recordes.txt") as arquivo:
             datarecordes = json.load(arquivo)
-            print("- Recordes:")
+            print("\n- Recordes:")
             for nivel, recorde in datarecordes.items():
                 if recorde == None:
                     recorde = "Não houve registro de"
@@ -87,14 +87,17 @@ def viewtempo():
     minutos = seg // 60
     seg = seg % 60
     print("\n- Tempo total jogado:")
-    if dias == 0 and horas == 0 and minutos == 0:
-        print(f"{seg} segundos\n")
-    elif dias == 0 and horas == 0:
-        print(f"{minutos} minutos e {seg} segundos\n")
-    elif dias == 0:
-        print(f"{horas} horas, {minutos} minutos e {seg} segundos\n")
+    if acumtotal == 0:
+        print("Nenhum tempo registrado ainda. Já tentou concluir uma sessão?\n")
     else:
-        print(f"{dias} dias, {horas} horas, {minutos} minutos e {seg} segundos\n") 
+        if dias == 0 and horas == 0 and minutos == 0:
+            print(f"{seg} segundos\n")
+        elif dias == 0 and horas == 0:
+            print(f"{minutos} minutos e {seg} segundos\n")
+        elif dias == 0:
+            print(f"{horas} horas, {minutos} minutos e {seg} segundos\n")
+        else:
+            print(f"{dias} dias, {horas} horas, {minutos} minutos e {seg} segundos\n") 
     input("\nPressione ENTER para voltar ao menu...")
 
 def calctempo(tempinicial, tempfinal):
