@@ -1,4 +1,3 @@
-
 CREATE DATABASE FEDERACAO_BD
 GO
 USE FEDERACAO_BD
@@ -88,6 +87,7 @@ INSERT INTO Jogador (id_jogador, Nome, Posicao, DataNascimento, FK_ID_Clube) VAL
 (37, 'Léo Jardim', 'GOL', '1995-01-01', 7);
 
 
+
 -- ##### COMANDOS DE CONSULTA ##### 
 
 select * from Jogador -- select * é basicamente selecionar TUDO
@@ -108,8 +108,5 @@ select * from Federacao where Nome not like '%MINEIRA%' -- seleciona todas as fe
 
 select * from Jogador where Posicao like 'ATA' -- seleciona todos os jogadores cuja posição é ATA
 
-select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube 
-
 select * from Jogador where Posicao not like 'MEI' -- seleciona todos os jogadores cuja posição NÃO é MEI
 
-select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube ORDER by Clube.Nome asc
