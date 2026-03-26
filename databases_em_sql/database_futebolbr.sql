@@ -107,5 +107,7 @@ select * from Federacao where Nome not like '%MINEIRA%' -- seleciona todas as fe
 
 select * from Jogador where Posicao like 'ATA' -- seleciona todos os jogadores cuja posição é ATA
 
+select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube 
+
 select * from Jogador where Posicao not like 'MEI' -- seleciona todos os jogadores cuja posição NÃO é MEI
 
