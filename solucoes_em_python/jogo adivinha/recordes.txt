@@ -1,0 +1,5 @@
+{
+    "Junior": 5,
+    "Pleno": 7,
+    "Senior": null
+}
