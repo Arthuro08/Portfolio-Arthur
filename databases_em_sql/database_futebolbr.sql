@@ -110,3 +110,6 @@ select * from Jogador where Posicao like 'ATA' -- seleciona todos os jogadores c
 
 select * from Jogador where Posicao not like 'MEI' -- seleciona todos os jogadores cuja posição NÃO é MEI
 
+select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube 
+
+select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube ORDER by Clube.Nome asc
