@@ -113,3 +113,5 @@ select * from Jogador where Posicao not like 'MEI' -- seleciona todos os jogador
 select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube 
 
 select * from Jogador join CLube on Jogador.FK_ID_Clube = Clube.ID_Clube ORDER by Clube.Nome asc
+
+select j.Nome as Jogador, j.Posicao, c.Nome as Clube from Jogador j join Clube c on j.FK_ID_Clube = c.ID_Clube order by c.Nome asc;
