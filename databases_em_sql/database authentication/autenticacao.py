@@ -31,6 +31,10 @@ def cadastrar():
         print('\nERRO: A senha não deve exceder 20 caracteres.')
         input('Aperte qualquer tecla para continuar...')
         return
+    if len(sign_senha) < 8:
+        print('\nERRO: A senha deve conter pelo menos 8 caracteres')
+        input('Aperte qualquer tecla para continuar...')
+        return
     confirm_senha = input('Quase lá. Agora confirme a senha: ')
     if sign_senha != confirm_senha:
         print('\nERRO: A confirmação de senha falhou.')
