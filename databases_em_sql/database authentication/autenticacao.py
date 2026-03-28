@@ -64,25 +64,65 @@ def login():
         input('Aperte qualquer tecla para continuar...')
 
 def adm():
+    
     admtentativa_senha = input('Insira a senha de administrador: ')
     if admtentativa_senha == ADMSENHA:
         print('Acesso concedido')
-        print('\n==== REGISTRO DE USUÁRIOS NO SISTEMA ====\n')
-        cursor.execute('SELECT Usuario.Username, Usuario.Senha FROM Usuario')
-        for row in cursor:
-            print(f'Usuário: {row.Username} | Senha: {row.Senha}')
-        input('\nAperte qualquer tecla para continuar...')
+        time.sleep(1)
+        while True:
+            os.system("cls")
+            print('======= ACESSO DO ADMINISTRADOR =======')
+            print('\n1 - Listar usuários e senhas')
+            print('2 - Deletar usuário')
+            print('0 - Voltar ao menu principal')
+            try:
+                opcaoadm = int(input('Escolha uma opção: '))
+            except ValueError:
+                print('ERRO: Insira uma opção válida!')
+                continue
+            
+            match opcaoadm:
+                case 1:
+                    admlistar()
+                case 2:
+                    admremover()   
+                case 0:
+                    print('Saindo...')
+                    time.sleep(2)
+                    return     
     else:
         print('ERRO: Acesso negado. Senha de administrador inválida.')
         input('\nAperte qualquer tecla para continuar...')
 
+def admlistar():
+    print('\n==== REGISTRO DE USUÁRIOS NO SISTEMA ====\n')
+    cursor.execute('SELECT Usuario.Username, Usuario.Senha FROM Usuario')
+    for row in cursor:
+        print(f'Usuário: {row.Username} | Senha: {row.Senha}')
+    input('\nAperte qualquer tecla para continuar...')
+
+def admremover():
+    encontrado = 0
+    removeuser = input('\nDigite o usuário a ser removido: ')
+    cursor.execute('SELECT * FROM Usuario')
+    for row in cursor:
+        if row.Username == removeuser:
+            encontrado = 1
+    if encontrado == 1:
+        cursor.execute('DELETE FROM Usuario WHERE Username = ? ', (removeuser,))
+        config.commit()
+        print('Usuário apagado do banco de dados do sistema com sucesso!')
+        input('\nAperte qualquer tecla para continuar...')
+    else:
+        print('ERRO: Usuário não encontrado no sistema!')
+        input('\nAperte qualquer tecla para continuar...')
 
 while True:
     os.system('cls')
     print('======= AUTENTICAÇÃO DE USUÁRIO =======')
     print('\n1 - Efetuar Cadastro')
     print('2 - Efetuar Log-in')
-    print('3 - Listar usuários e senhas (Acesso administrador)')
+    print('3 - Acesso do administrador')
     print('0 - Sair')
 
     try:
