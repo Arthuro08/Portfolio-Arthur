@@ -157,7 +157,7 @@ def userdados(nome_user):
 
 def useralterarsenha(nome_user):
     alterarsenha = input('\nEscolha uma nova senha: ')
-    confirm_alterarsenha = input('Confirme essa nova senha:')
+    confirm_alterarsenha = input('Senha legal! Agora confirme essa nova senha:')
     if alterarsenha != confirm_alterarsenha:
         print('\nERRO: A confirmação de senha falhou.')
         input('\nAperte qualquer tecla para continuar...')
