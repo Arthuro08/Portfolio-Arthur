@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -14,8 +15,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/png" href="imagens/faviconlogo.png">
   </head>
+
+
   <body>
-    <header>
+    <header class="cabecalho">
       <a class="nome">Arthur Almeida</a>
         <div class="header-right">
           <a href="#sobre">About Me</a>
@@ -23,7 +26,9 @@
           <a href="#contato">Contact</a>
         </div>
     </header>
-    <div id="principal">
+
+
+    <div class="principal">
       <img src="imagens/foto.jpg" alt="Foto de Arthur" class="foto-perfil" />
       <ul class="lista-linguagens">
         <li>C/C++</li>
@@ -65,11 +70,31 @@
         </p>
       </div>
     </section>
+
     <section id="estatisticas">
-      <div class="grafico">
-        <canvas id="myChart" width="400" height="200"></canvas>
-      </div>
+        <div class="projetos">
+          <h2 class="featured">Featured Projects</h2>
+          <ul>
+            <li> <a href='https://github.com/Arthuro08/Portfolio-Arthur/tree/main/sistemas_com_sql/database%20authentication' target="_blank">Authentication System - Python + SQL</a></li>
+            <li> <a href="https://github.com/Arthuro08/Portfolio-Arthur/tree/main/solucoes_em_c/sistema%20cadastro%20de%20alunos" target="_blank">Students CRUD System - C/C++</a></li>
+            <li> <a href="https://github.com/Arthuro08/Portfolio-Arthur/tree/main/solucoes_em_python/task%20manager" target="_blank"> Task Manager CRUD System - Python</a></li>
+          </ul>
+            
+          <h2 class="other">Some Other Projects</h2>
+          <ul>
+            <li> <a href='https://github.com/Arthuro08/Portfolio-Arthur/tree/main/solucoes_em_python/jogo%20adivinha' target="_blank">'Guess The Number' Game - Python</a></li>
+            <li> <a href='https://github.com/Arthuro08/Portfolio-Arthur/tree/main/solucoes_em_python/crash' target="_blank">'Crash' Bet Game - Python</a></li>
+            <li> <a href='https://github.com/Arthuro08/Portfolio-Arthur/tree/main/site_sobre_mim' target="_blank">About Me Website - HTML/CSS + JS</a></li>
+            <li> <a href="https://github.com/Arthuro08/Portfolio-Arthur/tree/main/solucoes_em_c/calculadora" target="_blank">Calculator - C/C++ </a></li>
+          </ul>
+        </div>
+        
+        <div class="grafico">
+          <h2>Projects made per Language</h2>
+          <canvas id="myChart"></canvas>
+        </div>
     </section>
+
     <section id="habilidades">
       <h2>Tech Stack</h2>
     <div class="flip-card-container">
@@ -232,13 +257,13 @@
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="imagens/mysql.png"
-              alt="MySQL"
+              src="imagens/sqlsever.png"
+              alt="SQL Server"
               style="width: auto; height: 150px; margin-top: 20px;"
             />
           </div>
           <div class="flip-card-back">
-            <h1>MySQL</h1>
+            <h1>SQL Server</h1>
             <p>
               Managing and querying relational databases with SQL.
             </p>

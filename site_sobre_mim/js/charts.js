@@ -11,11 +11,11 @@ const ctx = document.getElementById('myChart');
       datasets: [{
         data: [3, 2, 4, 2, 4],
         backgroundColor: [
-        '#ff9100',
-        '#f8e800',
+        '#0077ff',
+        '#3c30ac',
         '#9775fa',
         '#007fb9', 
-        '#51cf66' 
+        '#59abf8' 
       ],
       borderColor: '#222',
     }],

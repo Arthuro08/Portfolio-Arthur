@@ -21,11 +21,11 @@
         display: none;
     }
 
-    div#principal h1 {
+    .principal h1 {
         font-size: 28px;
     }
 
-    div#principal h2 {
+    .principal h2 {
         font-size: 16px;
     }
 
@@ -47,5 +47,98 @@
         width: 100%;
         max-width: 300px;
     }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-right {
+        float: none;
+        display: flex;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    /* ESTATÍSTICAS */
+    section#estatisticas {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .grafico {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .projetos {
+        padding: 0 15px;
+    }
+
+    .projetos ul {
+        padding-left: 20px;
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .principal {
+        padding-bottom: 80px;
+    }
+
+    .foto-perfil {
+        width: 140px;
+        height: 140px;
+    }
+
+    .principal h1 {
+        font-size: 24px;
+    }
+
+    .principal h2 {
+        font-size: 14px;
+    }
+
+    header a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .header-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-linguagens {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .flip-card {
+        height: 130px;
+    }
+
+    section#habilidades h2,
+    section#contato h2 {
+        font-size: 20px;
+    }
+
+    #btnTop {
+        width: 40px;
+        height: 40px;
+        bottom: 20px;
+    }
+
+    .arrow {
+        border-width: 0 5px 5px 0;
+        padding: 4px;
+    }
+
 
 }
