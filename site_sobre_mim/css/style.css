@@ -1,9 +1,13 @@
+html {
+    scroll-behavior: smooth
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #222;
-    background-image: url('imagens/fundo.jpg');
+    background-image: url('../imagens/fundo.jpg');
     background-attachment: fixed; 
     background-size: cover;
 }
@@ -249,56 +253,49 @@ section#contato i {
       transform: rotate(-135deg);
     }
 
-@media (max-width: 768px) {
+header {
+  overflow: hidden;
+  background-color: transparent;
+  padding: 20px 10px;
+}
 
-    body {
-        background-attachment: scroll;
-    }
+header a {
+  float: left;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
 
-    section#sobre {
-        flex-direction: column;
-        align-items: center;
-        gap: 40px; 
-        text-align: center;
-    }
+header a.nome {
+  font-size: 25px;
+  font-weight: bold;
+}
 
-    .trajetoria,
-    .aboutme {
-        max-width: 100%;
-        padding: 0 10px;
-    }
+header a:hover {
+  color: rgb(75, 123, 255);
+  transition: ease-in-out 0.3s;
+}
 
-    .linha-vertical {
-        display: none;
-    }
+header a.active {
+  color: white;
+}
 
-    div#principal h1 {
-        font-size: 28px;
-    }
+.header-right {
+  float: right;
+}
 
-    div#principal h2 {
-        font-size: 16px;
-    }
+.grafico{
+    width: 300px;
+    height: 300px; 
+    margin: 0 auto; 
+}
 
-    .lista-linguagens {
-        gap: 10px;
-    }
-
-    .lista-linguagens li {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    section#contato i {
-        font-size: 40px;
-        padding: 10px;
-    }
-
-    .flip-card {
-        width: 100%;
-        max-width: 300px;
-    }
-
+section#estatisticas{
+    background-color: #000000;
 }
 
 

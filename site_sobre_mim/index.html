@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arthur Almeida | Portfólio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
@@ -15,7 +16,12 @@
   </head>
   <body>
     <header>
-      <h1>Arthur Gomes Almeida</h1>
+      <a class="nome">Arthur Almeida</a>
+        <div class="header-right">
+          <a href="#sobre">About Me</a>
+          <a href="#habilidades">Skills</a>
+          <a href="#contato">Contact</a>
+        </div>
     </header>
     <div id="principal">
       <img src="imagens/foto.jpg" alt="Foto de Arthur" class="foto-perfil" />
@@ -59,7 +65,11 @@
         </p>
       </div>
     </section>
-
+    <section id="estatisticas">
+      <div class="grafico">
+        <canvas id="myChart" width="400" height="200"></canvas>
+      </div>
+    </section>
     <section id="habilidades">
       <h2>Tech Stack</h2>
     <div class="flip-card-container">
@@ -283,6 +293,10 @@
     <div id="btnTop">
         <i class="arrow up"></i>
     </div>
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/charts.js"></script>
+    
   </body>
 </html>
