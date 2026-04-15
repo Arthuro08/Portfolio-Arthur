@@ -242,6 +242,11 @@ section#contato i {
       cursor: pointer;
     }
 
+#btnTop:hover {
+    background-color: rgb(75, 123, 255);
+    transition: ease-in-out 0.3s;
+}
+
     .arrow {
       border: solid #0f0f0f; 
       border-width: 0 7px 7px 0;
