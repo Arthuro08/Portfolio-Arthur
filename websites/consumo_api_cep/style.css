@@ -1,0 +1,21 @@
+body{
+    padding: 0;
+    text-align: center;   
+}
+
+h1{
+    margin: 50px;
+}
+
+input{
+    border-radius: 10px;
+}
+
+button{
+    border-radius: 10px;
+}
+
+p{
+    margin:20px;
+}
+
