@@ -12,3 +12,5 @@ INSERT INTO Usuario(Username, Senha) VALUES
 ('NpcTeste1', '1234abcd'), -- só pra testar a integração msm
 ('NpcTeste2', '4321dcba'); -- só pra testar a integração msm
 select * from Usuario
+
+ALTER TABLE Usuario DROP COLUMN Status;

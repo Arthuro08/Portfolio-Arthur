@@ -119,3 +119,5 @@ select j.Nome as Jogador, j.Posicao, c.Nome as Clube from Jogador j join Clube c
 select Clube.Nome, Clube.Cidade, Federacao.Nome from Clube join Federacao on Clube.FK_ID_Federacao = Federacao.ID_Federacao order by Clube.Nome asc;
 
 select c.Nome as Clube, c.Cidade, f.Nome as Nome_Federacao from Clube c join Federacao f on c.FK_ID_Federacao = f.ID_Federacao where f.Sigla not like 'SP' order by c.Nome desc;
+
+select j.Nome as Jogador, j.Posicao, c.Nome as Clube, c.Cidade, f.Nome as Federacao from Jogador j join Clube c on j.FK_ID_Clube = c.ID_Clube join Federacao f on c.FK_ID_Federacao = f.ID_Federacao;
