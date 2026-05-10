@@ -112,6 +112,8 @@ INSERT INTO Jogador (id_jogador, Nome, Posicao, DataNascimento, FK_ID_Clube) VAL
 (60, 'Rochet', 'GOL', '1993-03-23', 9),
 (61, 'Enner Valencia', 'ATA', '1989-11-04', 9);
 
+DELETE FROM Jogador WHERE ID_Jogador>37;
+
 -- ##### COMANDOS DE CONSULTA ##### 
 
 select * from Jogador -- select * é basicamente selecionar TUDO
