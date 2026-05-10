@@ -86,7 +86,31 @@ INSERT INTO Jogador (id_jogador, Nome, Posicao, DataNascimento, FK_ID_Clube) VAL
 (36, 'Alan Patrick', 'MEI', '1991-01-01', 9),
 (37, 'Léo Jardim', 'GOL', '1995-01-01', 7);
 
-
+INSERT INTO Jogador (id_jogador, Nome, Posicao, DataNascimento, FK_ID_Clube) VALUES
+(38, 'Weverton', 'GOL', '1987-12-13', 1),
+(39, 'Marcos Rocha', 'LAT', '1988-12-11', 1),
+(40, 'Piquerez', 'LAT', '1998-08-24', 1),
+(41, 'Zé Rafael', 'MEI', '1993-06-16', 1),
+(42, 'Pedro', 'ATA', '1997-06-20', 2),
+(43, 'Everton Ribeiro', 'MEI', '1989-04-10', 2),
+(44, 'Fabrício Bruno', 'ZAG', '1996-02-12', 2),
+(45, 'Ayrton Lucas', 'LAT', '1997-06-19', 2),
+(46, 'Everson', 'GOL', '1990-07-22', 3),
+(47, 'Arana', 'LAT', '1997-04-14', 3),
+(48, 'Paulinho', 'ATA', '2000-07-15', 3),
+(49, 'Battaglia', 'MEI', '1991-07-12', 3),
+(50, 'Marchesín', 'GOL', '1988-03-16', 4),
+(51, 'Reinaldo', 'LAT', '1989-11-11', 4),
+(52, 'Cristaldo', 'MEI', '1996-03-31', 4),
+(53, 'Suárez', 'ATA', '1987-01-24', 4),
+(54, 'Rafinha', 'LAT', '1985-09-07', 5),
+(55, 'James Rodríguez', 'MEI', '1991-07-12', 5),
+(56, 'Fagner', 'LAT', '1989-06-11', 6),
+(57, 'Renato Augusto', 'MEI', '1988-02-08', 6),
+(58, 'Payet', 'MEI', '1987-03-29', 7),
+(59, 'Vegetti', 'ATA', '1988-10-15', 7),
+(60, 'Rochet', 'GOL', '1993-03-23', 9),
+(61, 'Enner Valencia', 'ATA', '1989-11-04', 9);
 
 -- ##### COMANDOS DE CONSULTA ##### 
 
