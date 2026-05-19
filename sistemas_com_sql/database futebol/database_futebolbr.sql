@@ -45,9 +45,6 @@ INSERT INTO Clube (id_clube, Nome, Cidade, FK_ID_Federacao) VALUES
 (4,'Grêmio', 'Porto Alegre', 4),
 (5, 'São Paulo', 'São Paulo', 1);
 
-
-select * from Clube
-
 INSERT INTO Jogador (id_jogador, Nome, Posicao, DataNascimento, FK_ID_Clube) VALUES 
 (1,'Raphael Veiga', 'MEI', '1995-06-19', 1),
 (2,'Giorgian De Arrascaeta', 'MEI', '1994-06-01', 2),

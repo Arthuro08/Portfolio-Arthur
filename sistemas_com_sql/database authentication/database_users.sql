@@ -9,8 +9,10 @@ CREATE TABLE Usuario(
 );
 
 INSERT INTO Usuario(Username, Senha) VALUES
-('NpcTeste1', '1234abcd'), -- só pra testar a integração msm
-('NpcTeste2', '4321dcba'); -- só pra testar a integração msm
+('NpcTeste1', '1234abcd'), -- só pra testar a integração mesmo
+('NpcTeste2', '4321dcba'); -- só pra testar a integração mesmo
 select * from Usuario
+
+select Usuario.Username from Usuario 
 
 ALTER TABLE Usuario DROP COLUMN Status;
