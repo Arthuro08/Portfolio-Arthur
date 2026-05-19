@@ -41,3 +41,5 @@ CREATE TABLE Exame(
 )
 
 EXEC sp_rename 'Paciente.nome', 'nome_paciente', 'COLUMN';
+
+SELECT * FROM Paciente
