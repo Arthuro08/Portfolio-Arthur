@@ -12,11 +12,11 @@
 <form action="/receber" method="POST">
   <h3>Paciente</h3><br>
   <label>Nome:</label>
-  <input type="text" id="nome_paciente">
+  <input type="text" name="nome_paciente">
   <label>Convênio:</label>
-  <input type="text" id="convenio">
+  <input type="text" name="convenio">
   <label>Data de Nascimento:</label>
-  <input type="date" id="data_nasc"><br><br>
+  <input type="date" name="data_nasc"><br><br>
   
   <label>Sexo:</label>
   <select name="sexo">
@@ -28,28 +28,28 @@
     </option>
   </select>
   <label>Estado Civil:</label>
-  <input type="text" id="est_civil" size="15">
+  <input type="text" name="est_civil" size="15">
   <label>RG:</label>
-  <input type="text" id="RG"><br><br>
+  <input type="text" name="RG"><br><br>
 
   <label>Endereço:</label>
-  <input type="text" id="endereco1" size="40">
+  <input type="text" name="endereco" size="40">
   <label>Telefone:</label>
-  <input type="text" id="telefone1"><br><br>
+  <input type="text" name="telefone"><br><br>
 
   <h3>Consulta</h3><br>
   <label>Data:</label>
-  <input type="date" id="data_consulta" size="15">
+  <input type="date" name="data_consulta" size="15">
   <label>Médico:</label>
-  <input type="text" id="medico">
+  <input type="text" name="medico">
   <label>Diagnóstico:</label>
-  <input type="text" id="diagnostico"><br><br>
+  <input type="text" name="diagnostico"><br><br>
 
   <h3>Exame</h3><br>
   <label>Exame:</label>
-  <input type="text" id="exame">
+  <input type="text" name="exame">
   <label>Data:</label>
-  <input type="text" id="data_exame"><br><br>
+  <input type="text" name="data_exame"><br><br>
 
   <button type="submit" value="Submit">Submeter</button>
 </form>
