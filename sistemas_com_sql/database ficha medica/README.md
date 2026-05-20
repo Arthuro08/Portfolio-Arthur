@@ -1,0 +1,1 @@
+Sendo bem franco eu não gosto de utilizar README muito extensos, então disponibilizei um PDF com toda a documentação e o passo a passo do desenvolvimento do projeto. Acesse toda a lógica que utilizei por lá, por favor 😄
