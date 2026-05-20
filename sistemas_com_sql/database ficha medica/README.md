@@ -1,3 +1,3 @@
 # Projeto - Ficha Médica em SQL/Python
 
-Sendo bem franco eu não gosto de utilizar README muito extensos, então disponibilizei um PDF com toda a documentação e o passo a passo do desenvolvimento do projeto. Acesse toda a lógica que utilizei por lá, por favor 😄
+Sendo bem franco, não estou gostando muito de utilizar READMEs extensos, então neste projeto decidi disponibilizar um PDF com toda a documentação e o passo a passo desde a modelagem até o desenvolvimento. Toda a lógica utilizada está detalhada por lá 😄
