@@ -144,3 +144,11 @@ select Clube.Nome, Clube.Cidade, Federacao.Nome from Clube join Federacao on Clu
 select c.Nome as Clube, c.Cidade, f.Nome as Nome_Federacao from Clube c join Federacao f on c.FK_ID_Federacao = f.ID_Federacao where f.Sigla not like 'SP' order by c.Nome desc;
 
 select j.Nome as Jogador, j.Posicao, c.Nome as Clube, c.Cidade, f.Nome as Federacao from Jogador j join Clube c on j.FK_ID_Clube = c.ID_Clube join Federacao f on c.FK_ID_Federacao = f.ID_Federacao;
+
+select * from Jogador where id_jogador between 10 and 30; -- seleciona todos os jogadores que possuem os ID entre 10 e 30
+
+select * from Jogador where Nome like "%a"; -- seleciona os jogadores cujo nome TERMINA com a letra "a". OBS: o % substitui um ou mais caracteres
+
+select * from Jogador where Nome like "a%"; -- seleciona os jogadores cujo nome COMEÇA com a letra "a". OBS: o % substitui um ou mais caracteres
+
+select * from Jogador where FK_ID_Clube IN(2,3) -- seleciona todos os jogadores cuja FK_ID_Clube=2 ou FK_ID_Clube=3
