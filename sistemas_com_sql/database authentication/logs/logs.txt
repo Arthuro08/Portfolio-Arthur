@@ -4,3 +4,5 @@
 [22/05/2026 21:18:18] Usuario Deletado: thurozs
 [22/05/2026 21:32:47] Login de Usuario: finn
 [22/05/2026 21:33:20] Nome de Usuario Alterado: finn -> jake
+[23/05/2026 00:21:16] Login de Usuario: jake
+[23/05/2026 00:21:31] Senha de Usuario alterada: jake. Conferir no banco de dados
