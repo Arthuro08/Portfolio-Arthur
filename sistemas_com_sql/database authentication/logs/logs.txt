@@ -2,3 +2,5 @@
 [22/05/2026 21:16:30] Login de Usuario: NpcTeste3
 [22/05/2026 21:16:39] Usuario deletado: NpcTeste3
 [22/05/2026 21:18:18] Usuario Deletado: thurozs
+[22/05/2026 21:32:47] Login de Usuario: finn
+[22/05/2026 21:33:20] Nome de Usuario Alterado: finn -> jake
