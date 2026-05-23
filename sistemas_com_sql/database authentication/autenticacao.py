@@ -12,7 +12,6 @@ config = pyodbc.connect(
 
 ADMSENHA = '08032007'
 cursor = config.cursor()
-arquivo_log = ""
 
 def cadastrar():
     sign_user = input('\nInsira um nome de usuário: ')
