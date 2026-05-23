@@ -1,6 +1,7 @@
 import pyodbc
 import os
 import time
+from datetime import datetime
 
 config = pyodbc.connect(
     'Driver={SQL Server};'
@@ -11,6 +12,7 @@ config = pyodbc.connect(
 
 ADMSENHA = '08032007'
 cursor = config.cursor()
+arquivo_log = ""
 
 def cadastrar():
     sign_user = input('\nInsira um nome de usuário: ')
@@ -42,6 +44,10 @@ def cadastrar():
         return
     cursor.execute("INSERT INTO Usuario (Username, Senha) VALUES (?, ?)", (sign_user, sign_senha))
     config.commit()
+    dataAtual = datetime.now()
+    dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+    with open("sistemas_com_sql/database authentication/logs/logs.txt", 'a') as addlog:
+        addlog.write(f'[{dataFormatada}] Cadastro de Usuario: {sign_user}\n')
     print('\nConta efetuada com sucesso!')
     input('\nAperte qualquer tecla para continuar...')
 
@@ -58,6 +64,10 @@ def login():
 
     if encontrado:
         print(f'\nAcesso liberado. Seja bem-vindo(a) de volta, {log_user}')
+        dataAtual = datetime.now()
+        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+        with open("sistemas_com_sql/database authentication/logs/logs.txt", 'a') as addlog:
+            addlog.write(f'[{dataFormatada}] Login de Usuario: {log_user}\n')
         time.sleep(1)
         user(log_user)
 
@@ -114,6 +124,10 @@ def admremover():
         cursor.execute('DELETE FROM Usuario WHERE Username = ? ', (removeuser,))
         config.commit()
         print('Usuário apagado do banco de dados do sistema com sucesso!')
+        dataAtual = datetime.now()
+        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+        with open("sistemas_com_sql/database authentication/logs/logs.txt", 'a') as addlog:
+            addlog.write(f'[{dataFormatada}] Usuario Deletado: {removeuser}\n')
         input('\nAperte qualquer tecla para continuar...')
     else:
         print('ERRO: Usuário não encontrado no sistema!')
@@ -166,6 +180,10 @@ def useralterarsenha(nome_user):
         cursor.execute('UPDATE Usuario SET Senha = ? WHERE Username = ?', (alterarsenha, nome_user))
         config.commit()
         print('A alteração de senha foi um sucesso!')
+        dataAtual = datetime.now()
+        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+        with open("sistemas_com_sql/database authentication/logs/logs.txt", 'a') as addlog:
+            addlog.write(f'[{dataFormatada}] Senha de Usuario alterada: {nome_user}. Conferir no banco de dados\n')
         input('\nAperte qualquer tecla para continuar...')
 
 def useralterarusername(nome_user):
@@ -174,6 +192,10 @@ def useralterarusername(nome_user):
         cursor.execute('UPDATE Usuario SET Username = ? WHERE Username = ?', (novo_username, nome_user))
         config.commit()
         print('Nome de usuário alterado com sucesso!')
+        dataAtual = datetime.now()
+        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+        with open("sistemas_com_sql/database authentication/logs/logs.txt", 'a') as addlog:
+            addlog.write(f'[{dataFormatada}] Nome de Usuario Alterado: {nome_user} -> {novo_username}\n')
         input('\nAperte qualquer tecla para continuar')
         return novo_username
     else:
@@ -189,6 +211,10 @@ def userdeletar(nome_user):
         config.commit()
         operacao = 1
         print('Sua conta foi deletada do sistema permanentemente.')
+        dataAtual = datetime.now()
+        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+        with open("sistemas_com_sql/database authentication/logs/logs.txt", 'a') as addlog:
+            addlog.write(f'[{dataFormatada}] Usuario deletado: {nome_user}\n')
         input('Aperte qualquer tecla para continuar')
         return operacao
     else:

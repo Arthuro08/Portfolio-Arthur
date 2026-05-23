@@ -1,0 +1,4 @@
+[22/05/2026 21:16:18] Cadastro de Usuário: NpcTeste3
+[22/05/2026 21:16:30] Login de Usuário: NpcTeste3
+[22/05/2026 21:16:39] Usuário deletado: NpcTeste3
+[22/05/2026 21:18:18] Usuario Deletado: thurozs
