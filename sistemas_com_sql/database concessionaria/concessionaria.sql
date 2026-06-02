@@ -1,0 +1,192 @@
+CREATE DATABASE Concessionaria
+GO
+USE Concessionaria
+
+CREATE TABLE Marca(
+    ID_Marca int PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    Nome varchar(255) UNIQUE NOT NULL,
+    Pais varchar(255) NOT NULL
+)
+
+CREATE TABLE Modelo(
+    ID_Modelo int PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    Nome varchar(255) NOT NULL,
+    Categoria varchar(255) NOT NULL,
+    FK_ID_Marca int FOREIGN KEY REFERENCES Marca(ID_Marca) NOT NULL
+)
+
+CREATE TABLE Carro(
+    ID_Carro int PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    Placa char(7) UNIQUE NOT NULL,
+    Ano int NOT NULL,
+    Cor varchar(255) NOT NULL,
+    Valor decimal(10,2) NOT NULL,
+    Quilometragem int NOT NULL,
+    FK_ID_Modelo int FOREIGN KEY REFERENCES Modelo(ID_Modelo) NOT NULL
+)
+
+CREATE TABLE Venda(
+    ID_Venda int PRIMARY KEY IDENTITY(1,1) NOT NULL,
+    Data_Venda date NOT NULL, 
+    Valor_Venda decimal(10,2) NOT NULL,
+    FK_ID_Carro int FOREIGN KEY REFERENCES Carro(ID_Carro) NOT NULL
+)
+
+INSERT INTO Marca(Nome, Pais) VALUES
+('Chevrolet', 'Estados Unidos'),
+('Audi', 'Alemanha'),
+('BMW', 'Alemanha'),
+('Mercedes', 'Alemanha'),
+('Lexus', 'Japão'),
+('Honda', 'Japão'),
+('Citroen', 'França'),
+('Hyundai', 'Coréia do Sul')
+
+INSERT INTO Modelo(Nome, Categoria, FK_ID_Marca) VALUES
+('HB20', 'Hatch', 8),
+('Santa Fe', 'SUV', 8),
+('Civic', 'Sedan', 6),
+('NX200T', 'SUV', 5),
+('Tracker', 'SUV', 1),
+('Onix', 'Hatch', 1),
+('C180', 'Sedan', 4),
+('A200', 'Hatch', 4),
+('320i', 'Sedan', 3),
+('A3', 'Sedan', 2),
+('Q3', 'SUV', 2),
+('X1', 'SUV', 3),
+('Elantra', 'Sedan', 8),
+('Creta', 'SUV', 8),
+('Corsa', 'Hatch', 1),
+('HR-V', 'SUV', 6),
+('Aircross', 'SUV', 7),
+('DS3', 'Hatch', 7),
+('Cobalt', 'Sedan', 1),
+('Azera', 'Sedan', 8),
+('G63', 'SUV', 4),
+('Q5', 'SUV', 2)
+
+
+INSERT INTO Carro
+(Placa, Ano, Cor, Valor, Quilometragem, FK_ID_Modelo)
+VALUES
+('ABC1234', 2022, 'Prata', 85000.00, 35000, 1), 
+('DEF5678', 2021, 'Branco', 165000.00, 42000, 2),
+('GHI9012', 2023, 'Preto', 145000.00, 12000, 3),
+('JKL3456', 2020, 'Cinza', 210000.00, 55000, 4),  
+('MNO7890', 2022, 'Azul', 125000.00, 28000, 5), 
+('PQR1235', 2021, 'Vermelho', 78000.00, 45000, 6), 
+('STU5679', 2023, 'Preto', 245000.00, 8000, 7), 
+('VWX9013', 2022, 'Branco', 198000.00, 18000, 8),
+('YZA3457', 2024, 'Cinza', 320000.00, 5000, 9),
+('BCD7891', 2023, 'Prata', 230000.00, 15000, 10), 
+('EFG2345', 2024, 'Preto', 340000.00, 3000, 11),
+('HIJ6789', 2022, 'Branco', 275000.00, 22000, 12),
+('KLM0123', 2020, 'Prata', 95000.00, 60000, 13), 
+('NOP4567', 2023, 'Cinza', 145000.00, 9000, 14), 
+('QRS8901', 2018, 'Vermelho', 35000.00, 110000, 15), 
+('TUV2346', 2024, 'Preto', 175000.00, 2000, 16),
+('WXY6780', 2021, 'Branco', 85000.00, 48000, 17),
+('ZAB0124', 2019, 'Amarelo', 72000.00, 70000, 18),
+('CDE4568', 2020, 'Prata', 68000.00, 65000, 19), 
+('FGH8902', 2022, 'Preto', 155000.00, 26000, 20), 
+('IJK2347', 2024, 'Preto', 1350000.00, 1000, 21),
+('LMN6781', 2023, 'Branco', 420000.00, 7000, 22), 
+('AAA1001', 2022, 'Prata', 82000.00, 25000, 1),
+('AAA1002', 2023, 'Branco', 89000.00, 12000, 1),
+('AAA1003', 2021, 'Preto', 78000.00, 45000, 1),
+('BBB2001', 2022, 'Cinza', 175000.00, 30000, 2),
+('BBB2002', 2024, 'Branco', 215000.00, 5000, 2),
+('CCC3001', 2023, 'Prata', 145000.00, 14000, 3),
+('CCC3002', 2022, 'Preto', 138000.00, 25000, 3),
+('CCC3003', 2021, 'Branco', 129000.00, 38000, 3),
+('DDD4001', 2022, 'Cinza', 225000.00, 22000, 4),
+('DDD4002', 2021, 'Preto', 210000.00, 40000, 4),
+('EEE5001', 2024, 'Azul', 138000.00, 3000, 5),
+('EEE5002', 2023, 'Prata', 128000.00, 12000, 5),
+('EEE5003', 2022, 'Branco', 119000.00, 28000, 5),
+('FFF6001', 2023, 'Vermelho', 85000.00, 11000, 6),
+('FFF6002', 2022, 'Prata', 78000.00, 24000, 6),
+('FFF6003', 2021, 'Preto', 69000.00, 45000, 6),
+('GGG7001', 2024, 'Preto', 255000.00, 4000, 7),
+('GGG7002', 2023, 'Branco', 238000.00, 9000, 7),
+('HHH8001', 2023, 'Prata', 198000.00, 10000, 8),
+('HHH8002', 2022, 'Cinza', 185000.00, 18000, 8),
+('III9001', 2024, 'Preto', 335000.00, 2000, 9),
+('III9002', 2023, 'Branco', 315000.00, 9000, 9),
+('III9003', 2022, 'Azul', 289000.00, 22000, 9),
+('JJJ1001', 2023, 'Prata', 235000.00, 12000, 10),
+('JJJ1002', 2022, 'Branco', 220000.00, 23000, 10),
+('KKK1101', 2024, 'Preto', 365000.00, 1500, 11),
+('KKK1102', 2023, 'Cinza', 340000.00, 8000, 11),
+('LLL1201', 2024, 'Branco', 295000.00, 3000, 12),
+('LLL1202', 2023, 'Preto', 275000.00, 12000, 12),
+('MMM1301', 2021, 'Prata', 98000.00, 55000, 13),
+('MMM1302', 2020, 'Preto', 89000.00, 70000, 13),
+('NNN1401', 2024, 'Branco', 165000.00, 2500, 14),
+('NNN1402', 2023, 'Prata', 152000.00, 10000, 14),
+('OOO1501', 2017, 'Vermelho', 32000.00, 130000, 15),
+('OOO1502', 2019, 'Prata', 42000.00, 90000, 15),
+('PPP1601', 2024, 'Cinza', 182000.00, 1500, 16),
+('PPP1602', 2023, 'Preto', 170000.00, 9000, 16),
+('QQQ1701', 2022, 'Branco', 87000.00, 35000, 17),
+('QQQ1702', 2021, 'Prata', 79000.00, 50000, 17),
+('RRR1801', 2020, 'Amarelo', 76000.00, 62000, 18),
+('RRR1802', 2019, 'Preto', 68000.00, 85000, 18),
+('SSS1901', 2021, 'Prata', 72000.00, 58000, 19),
+('SSS1902', 2020, 'Branco', 65000.00, 71000, 19),
+('TTT2001', 2023, 'Preto', 158000.00, 13000, 20),
+('TTT2002', 2022, 'Prata', 148000.00, 26000, 20),
+('UUU2101', 2024, 'Preto', 1450000.00, 500, 21),
+('UUU2102', 2023, 'Cinza', 1320000.00, 4500, 21),
+('VVV2201', 2024, 'Branco', 435000.00, 2000, 22),
+('VVV2202', 2023, 'Preto', 410000.00, 9000, 22);
+
+INSERT INTO Venda
+(Data_Venda, Valor_Venda, FK_ID_Carro)
+VALUES
+('2025-01-10', 80000.00, 1),
+('2025-01-15', 87000.00, 2),
+('2025-01-20', 170000.00, 4),
+('2025-01-25', 142000.00, 6),
+('2025-02-01', 205000.00, 9),
+('2025-02-03', 124000.00, 11),
+('2025-02-08', 76000.00, 14),
+('2025-02-12', 250000.00, 17),
+('2025-02-18', 190000.00, 19),
+('2025-02-22', 320000.00, 21),
+('2025-03-02', 225000.00, 24),
+('2025-03-05', 355000.00, 26),
+('2025-03-10', 290000.00, 28),
+('2025-03-14', 93000.00, 30),
+('2025-03-18', 160000.00, 32),
+('2025-03-22', 41000.00, 34),
+('2025-04-01', 178000.00, 36),
+('2025-04-05', 83000.00, 38),
+('2025-04-09', 70000.00, 40),
+('2025-04-15', 152000.00, 44),
+('2025-04-20', 1380000.00, 46),
+('2025-04-25', 1280000.00, 47),
+('2025-05-02', 430000.00, 48),
+('2025-05-07', 405000.00, 49),
+('2025-05-12', 147000.00, 45),
+('2025-05-18', 82000.00, 15),
+('2025-05-22', 118000.00, 13),
+('2025-05-28', 272000.00, 29),
+('2025-06-03', 335000.00, 22),
+('2025-06-10', 215000.00, 25);
+
+select v.Data_Venda, v.Valor_Venda, c.Ano, m.Nome, a.Nome as Marca from Venda v join Carro c on FK_ID_Carro = ID_Carro join Modelo m on FK_ID_Modelo = ID_Modelo join Marca a on FK_ID_Marca = ID_Marca
+
+select Pais, count(*) as Quantidade_Marcas from Marca group by Pais
+
+select Nome, Pais from Marca
+
+select * from Marca
+
+ALTER TABLE Marca ADD CONSTRAINT UQ_Marca_Nome UNIQUE (Nome) /* restrição (ou constraint) para a coluna Nome da tabela Marca (possuir apenas dados UNIQUE) */
+ALTER TABLE Modelo ADD CONSTRAINT UQ_Modelo_Nome UNIQUE (Nome)
+ALTER TABLE Venda ADD CONSTRAINT UQ_Venda_FK_ID_Carro UNIQUE (FK_ID_Carro) /* restrição na FK do Carro da tabela Venda para evitar que um carro seja vendido duas vezes */
+
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = 'Marca' /* seleciona todas as constraints criadas na tabela 'Marca' (Ex: a PK e o UNIQUE) */
+SELECT * FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE TABLE_NAME = 'Modelo' /* seleciona todas as constraints criadas na tabela 'Modelo' (Ex: a PK, a FK e o UNIQUE) */
