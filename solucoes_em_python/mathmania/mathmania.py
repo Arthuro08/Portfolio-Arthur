@@ -3,6 +3,12 @@ import time
 import os
 from datetime import datetime
 
+def salvar(pontuacao):
+    with open('solucoes_em_python/mathmania/pontuacao_logs.txt', 'a') as pontuacaototal:
+        dataAtual = datetime.now()
+        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
+        pontuacaototal.write(f'[{dataFormatada}] Pontuacao: {pontuacao}\n')
+
 def jogo():
     os.system('cls')
     expressao = ""
@@ -31,15 +37,19 @@ while(True):
     os.system('cls')
     pontuacao = 0
     print("---- MATHMANIA - VERSÃO BETA ----\n")
-    rodadas = int(input("Insira a quantidade de rodadas a serem jogadas: "))
-    for cont in range(3):
-        print(f"Começando em {cont+1}")
+    try:
+        rodadas = int(input("Insira a quantidade de rodadas a serem jogadas: "))
+        if rodadas == 0:
+            print("Número inválido. Não pode ser 0. Tente novamente")
+            time.sleep(1)
+        else:
+            for cont in range(3, 0, -1):
+                print(f"Começando em {cont}")
+                time.sleep(1)
+            for i in range(rodadas):
+                pontuacao += jogo()
+            salvar(pontuacao)
+    except ValueError:
+        print("Número inválido. Tente novamente")
         time.sleep(1)
-    for i in range(rodadas):
-        pontuacao += jogo()
-    
-    with open('solucoes_em_python/mathmania/pontuacao_logs.txt', 'a') as pontuacaototal:
-        dataAtual = datetime.now()
-        dataFormatada = dataAtual.strftime("%d/%m/%Y %H:%M:%S")
-        pontuacaototal.write(f'[{dataFormatada}] Pontuacao: {pontuacao}\n')
     
