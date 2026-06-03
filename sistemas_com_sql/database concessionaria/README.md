@@ -10,17 +10,17 @@ Este projeto é um sistema de ponta a ponta para o gerenciamento de vendas e est
 
 ## 🗂️ Estrutura do Repositório
 
-### Modelagem de Dados
+### modelagem (Modelagem de Dados)
 * `Modelo Conceitual - Concessionaria.png`: Visão de alto nível das entidades e seus relacionamentos.
 * `Modelo Lógico - Concessionaria.png`: Estrutura detalhada do banco, mapeando chaves primárias (PK), chaves estrangeiras (FK) e os tipos de dados.
 
-### Banco de Dados (Scripts SQL)
+### arquivos sql (Scripts SQL)
 * `create_Concessionaria.sql`: Script de criação do banco de dados e das tabelas principais (`Marca`, `Modelo`, `Carro` e `Venda`).
 * `constraints_Concessionaria.sql`: Aplicação de regras de integridade e negócio, utilizando restrições `UNIQUE` e `CHECK`.
 * `insert_Concessionaria.sql`: Carga inicial com dados realistas para simular o ambiente de vendas e estoque da concessionária.
 * `consultas_Concessionaria.sql`: Scripts contendo junções (`JOIN`) e agregações (`GROUP BY`) utilizadas para a extração de métricas.
 
-### Business Intelligence
+### dashboard (Business Intelligence)
 * `Dashboard_De_Vendas_E_Estoque.pbix`: Arquivo do Power BI contendo o painel interativo.
 * O dashboard apresenta KPIs essenciais para o negócio, incluindo:
   * Faturamento mensal e total de vendas.
