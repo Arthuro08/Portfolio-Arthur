@@ -3,6 +3,26 @@ import time
 import os
 from datetime import datetime
 
+def qtdrodadas(pontuacao):
+    try:
+        rodadas = int(input("Insira a quantidade de rodadas a serem jogadas: "))
+        if rodadas == 0:
+            print("Número inválido. Não pode ser 0. Tente novamente")
+            time.sleep(1)
+        elif rodadas < 0:
+            print("Número inválido. Não pode ser número negativo. Tente novamente")
+            time.sleep(1)
+        else:
+            for cont in range(3, 0, -1):
+                print(f"Começando em {cont}")
+                time.sleep(1)
+        for i in range(rodadas):
+            pontuacao += jogo()
+        salvar(pontuacao)
+    except ValueError:
+        print("Número inválido. Tente novamente")
+        time.sleep(1)
+
 def salvar(pontuacao):
     with open('solucoes_em_python/mathmania/pontuacao_logs.txt', 'a') as pontuacaototal:
         dataAtual = datetime.now()
@@ -23,7 +43,7 @@ def jogo():
             expressao += f"{num} + "
     
     print(expressao)
-    scan = int(input("\nDigite o resultado:"))
+    scan = int(input("\nDigite o resultado: "))
     if scan == result:
         print("\nParabéns, você acertou! 5 pontos")
         time.sleep(2)
@@ -37,22 +57,22 @@ while(True):
     os.system('cls')
     pontuacao = 0
     print("---- MATHMANIA - VERSÃO BETA ----\n")
+    print("1 - Começar jogo")
+    print("0 - Sair\n")
     try:
-        rodadas = int(input("Insira a quantidade de rodadas a serem jogadas: "))
-        if rodadas == 0:
-            print("Número inválido. Não pode ser 0. Tente novamente")
-            time.sleep(1)
-        elif rodadas < 0:
-            print("Número inválido. Não pode ser número negativo. Tente novamente")
-            time.sleep(1)
-        else:
-            for cont in range(3, 0, -1):
-                print(f"Começando em {cont}")
-                time.sleep(1)
-            for i in range(rodadas):
-                pontuacao += jogo()
-            salvar(pontuacao)
+        opcao = int(input("Digite uma opção: "))
     except ValueError:
-        print("Número inválido. Tente novamente")
+        print("Opção inválida. Tente novamente.")
         time.sleep(1)
+    if opcao < 0 or opcao > 1:
+        print("Opção inválida. Tente novamente.")
+        time.sleep(1)
+    else:
+        match(opcao):
+            case 1:
+                qtdrodadas(pontuacao)
+            case 0:
+                print("Saindo do jogo...")
+                time.sleep(1)
+                break
     
