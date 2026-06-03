@@ -6,3 +6,5 @@
 [22/05/2026 21:33:20] Nome de Usuario Alterado: finn -> jake
 [23/05/2026 00:21:16] Login de Usuario: jake
 [23/05/2026 00:21:31] Senha de Usuario alterada: jake. Conferir no banco de dados
+[02/06/2026 22:51:22] Cadastro de Usuario: hlhl
+[02/06/2026 22:51:33] Login de Usuario: hlhl
