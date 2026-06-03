@@ -40,4 +40,3 @@ Este projeto consiste na modelagem e implementação de um banco de dados para u
 2. **Acessando o Dashboard:**
    * Certifique-se de ter o [Power BI Desktop](https://powerbi.microsoft.com/desktop/) instalado na sua máquina.
    * Abra o arquivo `Dashboard_De_Vendas_E_Estoque.pbix`.
-   * *Nota:* Caso deseje conectar o painel diretamente ao seu banco de dados local recém-criado, acesse a aba "Transformar Dados" (Power Query) e atualize as credenciais e a fonte da conexão.
