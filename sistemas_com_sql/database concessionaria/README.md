@@ -1,7 +1,7 @@
 # 🚗 Concessionária - Banco de Dados e Dashboard Analytics
 
 ## 📌 Sobre o Projeto
-Este projeto é um sistema de ponta a ponta para o gerenciamento de vendas e estoque de uma concessionária de veículos. A solução abrange desde a modelagem estruturada dos dados até a implementação do banco de dados relacional e a construção de um dashboard analítico interativo para o suporte à tomada de decisão.
+Este projeto consiste na modelagem e implementação de um banco de dados para uma concessionária de veículos, utilizando SQL Server. Além da estruturação dos dados, foi desenvolvido um dashboard no Power BI para análise de vendas, estoque e indicadores do negócio.
 
 ## 🛠️ Tecnologias Utilizadas
 * **Banco de Dados:** SQL Server (T-SQL)
