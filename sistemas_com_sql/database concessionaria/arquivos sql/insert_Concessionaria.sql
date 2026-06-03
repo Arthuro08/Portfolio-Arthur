@@ -1,36 +1,4 @@
-CREATE DATABASE Concessionaria
-GO
 USE Concessionaria
-
-CREATE TABLE Marca(
-    ID_Marca int PRIMARY KEY IDENTITY(1,1) NOT NULL,
-    Nome varchar(255) UNIQUE NOT NULL,
-    Pais varchar(255) NOT NULL
-)
-
-CREATE TABLE Modelo(
-    ID_Modelo int PRIMARY KEY IDENTITY(1,1) NOT NULL,
-    Nome varchar(255) NOT NULL,
-    Categoria varchar(255) NOT NULL,
-    FK_ID_Marca int FOREIGN KEY REFERENCES Marca(ID_Marca) NOT NULL
-)
-
-CREATE TABLE Carro(
-    ID_Carro int PRIMARY KEY IDENTITY(1,1) NOT NULL,
-    Placa char(7) UNIQUE NOT NULL,
-    Ano int NOT NULL,
-    Cor varchar(255) NOT NULL,
-    Valor decimal(10,2) NOT NULL,
-    Quilometragem int NOT NULL,
-    FK_ID_Modelo int FOREIGN KEY REFERENCES Modelo(ID_Modelo) NOT NULL
-)
-
-CREATE TABLE Venda(
-    ID_Venda int PRIMARY KEY IDENTITY(1,1) NOT NULL,
-    Data_Venda date NOT NULL, 
-    Valor_Venda decimal(10,2) NOT NULL,
-    FK_ID_Carro int FOREIGN KEY REFERENCES Carro(ID_Carro) NOT NULL
-)
 
 INSERT INTO Marca(Nome, Pais) VALUES
 ('Chevrolet', 'Estados Unidos'),
@@ -175,14 +143,6 @@ VALUES
 ('2025-05-28', 272000.00, 29),
 ('2025-06-03', 335000.00, 22),
 ('2025-06-10', 215000.00, 25);
-
-select v.Data_Venda, v.Valor_Venda, c.Ano, m.Nome, a.Nome as Marca from Venda v join Carro c on FK_ID_Carro = ID_Carro join Modelo m on FK_ID_Modelo = ID_Modelo join Marca a on FK_ID_Marca = ID_Marca
-
-select Pais, count(*) as Quantidade_Marcas from Marca group by Pais
-
-select Nome, Pais from Marca
-
-select * from Marca
 
 ALTER TABLE Marca ADD CONSTRAINT UQ_Marca_Nome UNIQUE (Nome) /* restrição (ou constraint) para a coluna Nome da tabela Marca (possuir apenas dados UNIQUE) */
 ALTER TABLE Modelo ADD CONSTRAINT UQ_Modelo_Nome UNIQUE (Nome)
