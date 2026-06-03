@@ -8,7 +8,7 @@ ALTER TABLE Venda ADD CONSTRAINT CHCK_Venda_Valor_Venda CHECK (Valor_Venda >= 0)
 ALTER TABLE Carro ADD CONSTRAINT CHCK_Carro_Valor CHECK (Valor >= 0)
 ALTER TABLE Carro ADD CONSTRAINT CHCK_Carro_Quilometragem CHECK (Quilometragem >= 0)
 
-
+-- consultas para visualização das constraints
 select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_NAME = 'Marca' /* seleciona todas as constraints criadas na tabela 'Marca' (Ex: a PK e o UNIQUE) */
 select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_NAME = 'Modelo' /* seleciona todas as constraints criadas na tabela 'Modelo' (Ex: a PK, a FK e o UNIQUE) */
 select * from INFORMATION_SCHEMA.TABLE_CONSTRAINTS where TABLE_NAME = 'Carro'
