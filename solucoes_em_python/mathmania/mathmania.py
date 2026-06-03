@@ -42,6 +42,8 @@ while(True):
         if rodadas == 0:
             print("Número inválido. Não pode ser 0. Tente novamente")
             time.sleep(1)
+        elif rodadas < 0:
+            print("Número inválido. Não pode ser número negativo. Tente novamente")
         else:
             for cont in range(3, 0, -1):
                 print(f"Começando em {cont}")
