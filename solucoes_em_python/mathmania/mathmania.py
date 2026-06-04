@@ -3,6 +3,15 @@ import time
 import os
 from datetime import datetime
 
+ascii = """
+  __  __    _  _____ _   _ __  __    _    _   _ ___    _    
+ |  \/  |  / \|_   _| | | |  \/  |  / \  | \ | |_ _|  / \   
+ | |\/| | / _ \ | | | |_| | |\/| | / _ \ |  \| || |  / _ \  
+ | |  | |/ ___ \| | |  _  | |  | |/ ___ \| |\  || | / ___ \ 
+ |_|  |_/_/   \_\_| |_| |_|_|  |_/_/   \_\_| \_|___/_/   \_|
+____________________________________________________________                                                                                
+"""
+
 def qtdrodadas(pontuacao):
     try:
         rodadas = int(input("Insira a quantidade de rodadas a serem jogadas: "))
@@ -56,7 +65,8 @@ def jogo():
 while(True):
     os.system('cls')
     pontuacao = 0
-    print("---- MATHMANIA - VERSÃO BETA ----\n")
+    print(ascii)
+    print("MENU\n")
     print("1 - Começar jogo")
     print("0 - Sair\n")
     try:
