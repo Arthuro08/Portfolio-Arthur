@@ -3,14 +3,14 @@ import time
 import os
 from datetime import datetime
 
-ascii = """
-  __  __    _  _____ _   _ __  __    _    _   _ ___    _    
+ascii = """  __  __    _  _____ _   _ __  __    _    _   _ ___    _    
  |  \/  |  / \|_   _| | | |  \/  |  / \  | \ | |_ _|  / \   
  | |\/| | / _ \ | | | |_| | |\/| | / _ \ |  \| || |  / _ \  
  | |  | |/ ___ \| | |  _  | |  | |/ ___ \| |\  || | / ___ \ 
  |_|  |_/_/   \_\_| |_| |_|_|  |_/_/   \_\_| \_|___/_/   \_|
-____________________________________________________________                                                                                
-"""
+____________________________________________________________"""
+
+operadores = ['+', '-']
 
 def qtdrodadas(pontuacao):
     try:
@@ -40,16 +40,19 @@ def salvar(pontuacao):
 
 def jogo():
     os.system('cls')
-    expressao = ""
-    result = 0
     qtd = random.randint(2,4)
-    for i in range(qtd):
+    primeiro_numero = random.randint(1,100)
+    result = primeiro_numero
+    expressao = str(primeiro_numero)
+    for i in range(qtd-1):
         num = random.randint(1,100)
-        result += num
-        if i == qtd-1:
-            expressao += f"{num}"
+        sinal = random.choice(operadores)
+        if sinal == '-':
+            result -= num
+            expressao += f" - {num}"
         else:
-            expressao += f"{num} + "
+            result += num
+            expressao += f" + {num}"
     
     print(expressao)
     scan = int(input("\nDigite o resultado: "))
@@ -66,7 +69,7 @@ while(True):
     os.system('cls')
     pontuacao = 0
     print(ascii)
-    print("MENU\n")
+    print("\nMENU\n")
     print("1 - Começar jogo")
     print("0 - Sair\n")
     try:
