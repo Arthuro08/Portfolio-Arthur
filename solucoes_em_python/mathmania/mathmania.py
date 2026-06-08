@@ -10,7 +10,7 @@ ascii = """  __  __    _  _____ _   _ __  __    _    _   _ ___    _
  |_|  |_/_/   \_\_| |_| |_|_|  |_/_/   \_\_| \_|___/_/   \_|
 ____________________________________________________________"""
 
-operadores = ['+', '-']
+operadores = ['+', '-', 'x']
 
 def qtdrodadas(pontuacao):
     try:
@@ -40,19 +40,27 @@ def salvar(pontuacao):
 
 def jogo():
     os.system('cls')
+    result = 0
+    lista_numeros = []
     qtd = random.randint(2,4)
     primeiro_numero = random.randint(1,100)
+    lista_numeros.append(primeiro_numero)
     result = primeiro_numero
     expressao = str(primeiro_numero)
     for i in range(qtd-1):
         num = random.randint(1,100)
+        lista_numeros.append(num)
         sinal = random.choice(operadores)
         if sinal == '-':
             result -= num
             expressao += f" - {num}"
+        elif sinal == 'x':
+            result += lista_numeros[-2] * (lista_numeros[-1] - 1)
+            expressao += f" x {num}"
         else:
             result += num
             expressao += f" + {num}"
+        
     
     print(expressao)
     scan = int(input("\nDigite o resultado: "))
