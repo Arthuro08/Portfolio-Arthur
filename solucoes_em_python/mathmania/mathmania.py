@@ -55,7 +55,8 @@ def jogo():
             result -= num
             expressao += f" - {num}"
         elif sinal == 'x':
-            result += lista_numeros[-2] * (lista_numeros[-1] - 1)
+            result -= lista_numeros[-2]
+            result += lista_numeros[-2] * lista_numeros[-1]
             expressao += f" x {num}"
         else:
             result += num
