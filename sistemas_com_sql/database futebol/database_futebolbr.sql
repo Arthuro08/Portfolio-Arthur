@@ -124,3 +124,13 @@ select * from Jogador where Nome like "%a"; -- seleciona os jogadores cujo nome 
 select * from Jogador where Nome like "a%"; -- seleciona os jogadores cujo nome COMEÇA com a letra "a". OBS: o % substitui um ou mais caracteres
 
 select * from Jogador where FK_ID_Clube IN(2,3) -- seleciona todos os jogadores cuja FK_ID_Clube=2 ou FK_ID_Clube=3
+
+-- #### COMANDOS DE EXCLUSAO DE DADOS ####
+
+delete from Jogador where Nome = 'Reinaldo'; -- DELETE serve para dados (registros) // DROP serve para objetos (tabelas ou um banco de dados inteiro)
+
+truncate table Jogador; -- deleta todos os registros de uma tabela
+
+-- #### ATUALIZAR OS DADOS DE UM DETERMINADO REGISTRO NA TABELA ####
+
+update Jogador set nome = 'Joaquim' where  ID_Jogador = 21;
