@@ -165,9 +165,14 @@ select Posicao, count(*) 'Qtd Jogadores' from Jogador group by Posicao having co
 
 select max(DataNascimento) from Jogador -- mostra a data de nascimento do jogador mais novo no banco de dados
 
+select min(DataNascimento) from Jogador -- mostra a data de nascimneto do jogador mais velho no banco de dados
+
+
 -- #### LEFT JOIN
 
+INSERT INTO Clube(id_clube, Nome, Cidade, FK_ID_Federacao) VALUES -- adiciona um novo clube para testar o left join
+(10,'Santos', 'São Paulo', 1)
+    
 select * from Clube left join Jogador on ID_Clube = FK_ID_Clube -- se uma linha da tabela da esquerda não houver valores na direita, diferente do join comum, o select não excluirá essa linha, apenas adicionará null nos valores da tabela direita
 -- Exemplo: Santos nesse contexto não possui nenhum jogador cadastrado. Ele aparece no select, mas os valores da linha dele é NULL.
 
-select min(DataNascimento) from Jogador -- mostra a data de nascimneto do jogador mais velho no banco de dados
