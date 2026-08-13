@@ -97,6 +97,8 @@ select * from Jogador ORDER by Nome asc -- seleciona todos os jogadores em ordem
 
 select * from Federacao where sigla = 'SP' -- seleciona todas as federações cuja sigla é SP
 
+select * from Jogador where Posicao in ('ZAG', 'GOL')
+
 select * from Federacao where Nome like '%FEDERAÇÃO%' -- seleciona todas as federações que possuem "Federação" no nome
 
 select * from Federacao where Nome not like '%MINEIRA%' -- seleciona todas as federações que NÃO possuem "Mineira" no nome
