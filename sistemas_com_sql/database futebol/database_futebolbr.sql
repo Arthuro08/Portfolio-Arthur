@@ -134,3 +134,16 @@ truncate table Jogador; -- deleta todos os registros de uma tabela
 -- #### ATUALIZAR OS DADOS DE UM DETERMINADO REGISTRO NA TABELA ####
 
 update Jogador set nome = 'Joaquim' where  ID_Jogador = 21;
+
+--- #### CÁLCULOS MATEMÁTICOS EM SQL
+
+select power(2,3) -- exponenciação
+select abs(-13) -- módulo (valor absoluto)
+select sqrt(49) -- raiz quadrada
+select sum(15+50) -- soma
+select price, round(price,1) as 'Preço com mais  ou menos casas decimais' from titles -- esse não vai funcionar nessa database pois nao tem nem sequer numero decimal, mas é basicamente: arredonda o valor de um número decimal ou especifica, tipo 9,99 arredondado com round(price,1) vai mostrar 10,00
+
+-- #### MANIPULAÇÃO DE TEXTO
+
+select lower(Sigla) as 'Siglas em minusculo' from Federacao -- converte todas as siglas em minúsculo
+select upper(Nome) as 'Nomes de Jogador em maiusculo' from Jogador -- converte todos os nomes de jogador em maiusculo
