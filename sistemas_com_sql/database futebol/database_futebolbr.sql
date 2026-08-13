@@ -174,5 +174,5 @@ INSERT INTO Clube(id_clube, Nome, Cidade, FK_ID_Federacao) VALUES -- adiciona um
 (10,'Santos', 'São Paulo', 1)
     
 select * from Clube left join Jogador on ID_Clube = FK_ID_Clube -- se uma linha da tabela da esquerda não houver valores na direita, diferente do join comum, o select não excluirá essa linha, apenas adicionará null nos valores da tabela direita
--- Exemplo: Santos nesse contexto não possui nenhum jogador cadastrado. Ele aparece no select, mas os valores da linha dele é NULL.
+-- Exemplo: Santos nesse contexto não possui nenhum jogador cadastrado. Os valores do Santos da Tabela Clube aparece no select, mas os valores da tabela Jogador nessa linha vai ser NULL, já que santos nao tem jogador cadastrado
 
