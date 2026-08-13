@@ -157,8 +157,12 @@ select upper(Nome) as 'Nomes de Jogador em maiusculo' from Jogador -- converte t
 
 select Nome, Estado + ',' + Sigla 'Estado | Sigla' from Federacao -- concatena duas colunas de strings
 
--- #### GROUP BY
+-- #### GROUP BY E FUNÇÕES DE AGREGAÇÃO
 
 select Posicao, count(*) 'Qtd Jogadores' from Jogador group by Posicao -- conta a quantidade de jogadores por posicao. count(*) e group by Posicao
 
 select Posicao, count(*) 'Qtd Jogadores' from Jogador group by Posicao having count(*) > 5 -- mostra apenas uma tabela cujas posições possuem mais de 5 jogadores. a condição 'Having' só funciona com funções de agregação: SUM(), COUNT(), MIN(), MAX(), etc
+
+select max(DataNascimento) from Jogador -- mostra a data de nascimento do jogador mais novo no banco de dados
+
+select min(DataNascimento) from Jogador -- mostra a data de nascimneto do jogador mais velho no banco de dados
