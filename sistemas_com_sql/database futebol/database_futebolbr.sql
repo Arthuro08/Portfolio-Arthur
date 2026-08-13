@@ -140,18 +140,25 @@ update Jogador set nome = 'Joaquim' where  ID_Jogador = 21;
 --- #### CÁLCULOS MATEMÁTICOS EM SQL
 
 select power(2,3) -- exponenciação
+    
 select abs(-13) -- módulo (valor absoluto)
+    
 select sqrt(49) -- raiz quadrada
+    
 select sum(15+50) -- soma
+    
 select price, round(price,1) as 'Preço com mais  ou menos casas decimais' from titles -- esse não vai funcionar nessa database pois nao tem nem sequer numero decimal, mas é basicamente: arredonda o valor de um número decimal ou especifica, tipo 9,99 arredondado com round(price,1) vai mostrar 10,00
 
 -- #### MANIPULAÇÃO DE TEXTO
 
 select lower(Sigla) as 'Siglas em minusculo' from Federacao -- converte todas as siglas em minúsculo
+    
 select upper(Nome) as 'Nomes de Jogador em maiusculo' from Jogador -- converte todos os nomes de jogador em maiusculo
+
 select Nome, Estado + ',' + Sigla 'Estado | Sigla' from Federacao -- concatena duas colunas de strings
 
 -- #### GROUP BY
 
-select Posicao, count(*) from Jogador group by Posicao -- conta a quantidade de jogadores por posicao. count(*) e group by Posicao
+select Posicao, count(*) 'Qtd Jogadores' from Jogador group by Posicao -- conta a quantidade de jogadores por posicao. count(*) e group by Posicao
 
+select Posicao, count(*) 'Qtd Jogadores' from Jogador group by Posicao having count(*) > 5 -- mostra apenas uma tabela cujas posições possuem mais de 5 jogadores. a condição 'Having' só funciona com funções de agregação: SUM(), COUNT(), MIN(), MAX(), etc
