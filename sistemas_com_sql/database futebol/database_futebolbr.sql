@@ -150,3 +150,8 @@ select price, round(price,1) as 'Preço com mais  ou menos casas decimais' from 
 select lower(Sigla) as 'Siglas em minusculo' from Federacao -- converte todas as siglas em minúsculo
 select upper(Nome) as 'Nomes de Jogador em maiusculo' from Jogador -- converte todos os nomes de jogador em maiusculo
 select Nome, Estado + ',' + Sigla 'Estado | Sigla' from Federacao -- concatena duas colunas de strings
+
+-- #### GROUP BY
+
+select Posicao, count(*) from Jogador group by Posicao -- conta a quantidade de jogadores por posicao. count(*) e group by Posicao
+
