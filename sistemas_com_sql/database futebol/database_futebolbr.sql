@@ -178,3 +178,4 @@ INSERT INTO Clube(id_clube, Nome, Cidade, FK_ID_Federacao) VALUES -- adiciona um
 select * from Clube left join Jogador on ID_Clube = FK_ID_Clube -- se uma linha da tabela da esquerda não houver valores na direita, diferente do join comum, o select não excluirá essa linha, apenas adicionará null nos valores da tabela direita
 -- Exemplo: Santos nesse contexto não possui nenhum jogador cadastrado. Os valores do Santos da Tabela Clube aparece no select, mas os valores da tabela Jogador nessa linha vai ser NULL, já que santos nao tem jogador cadastrado
 
+select c.Nome as 'Clube', COUNT(j.Nome) as 'Qtd de Jogadores' from Jogador j right join Clube c on FK_ID_Clube = ID_Clube group by j.FK_ID_Clube, c.Nome order by 'Qtd de Jogadores' desc -- pega a quantidade total de jogadores registrados em cada clube cadastrado, e ordenando por quantidade de jogadores do maior para o menor
