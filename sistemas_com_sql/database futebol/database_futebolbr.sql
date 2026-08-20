@@ -127,6 +127,8 @@ select * from Jogador where Nome like "a%"; -- seleciona os jogadores cujo nome 
 
 select * from Jogador where FK_ID_Clube IN(2,3) -- seleciona todos os jogadores cuja FK_ID_Clube=2 ou FK_ID_Clube=3
 
+select distinct(Posicao) from Jogador -- mostra apenas uma vez cada valor presente em uma coluna (nao repete mais de uma vez um valor no resultado)
+
 -- #### COMANDOS DE EXCLUSAO DE DADOS ####
 
 delete from Jogador where Nome = 'Reinaldo'; -- DELETE serve para dados (registros) // DROP serve para objetos (tabelas ou um banco de dados inteiro)
