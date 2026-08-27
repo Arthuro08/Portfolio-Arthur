@@ -213,3 +213,11 @@ BEGIN
 END
 GO -- usando o GO entre a procedure e o exec vc pode rodar o bloco de codigo inteiro sem quebrar ou dar loop infinito
 EXEC sp_parametro 4 -- o último valor é o parametro que será passado. A procedure vai buscar todos os jogadores que contenham o ID menor ou igual a 4
+
+-- PROCEDURE POR VÁRIOS PARÂMETROS
+CREATE OR ALTER PROCEDURE sp_muitos_parametros(@id_jogador int, @clube varchar(255)) AS
+BEGIN
+    SELECT * from Jogador j left join Clube c on j.FK_ID_Clube = ID_Clube where j.ID_Jogador <= @id_jogador AND c.Nome = @clube
+END
+GO
+EXEC sp_muitos_parametros 10, 'Palmeiras' -- a procedure vai buscar todos os jogadores que possuem o ID Menor ou igual a 10 e que jogam no Palmeiras
