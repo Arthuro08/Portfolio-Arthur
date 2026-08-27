@@ -179,3 +179,27 @@ select * from Clube left join Jogador on ID_Clube = FK_ID_Clube -- se uma linha 
 -- Exemplo: Santos nesse contexto não possui nenhum jogador cadastrado. Os valores do Santos da Tabela Clube aparece no select, mas os valores da tabela Jogador nessa linha vai ser NULL, já que santos nao tem jogador cadastrado
 
 select c.Nome as 'Clube', COUNT(j.Nome) as 'Qtd de Jogadores' from Jogador j right join Clube c on FK_ID_Clube = ID_Clube group by j.FK_ID_Clube, c.Nome order by 'Qtd de Jogadores' desc -- pega a quantidade total de jogadores registrados em cada clube cadastrado, e ordenando por quantidade de jogadores do maior para o menor
+
+-- ### PROCEDURES
+
+CREATE OR ALTER PROCEDURE sp_procedure_simples AS -- inicia a criação da procedure
+    DECLARE @nome varchar(255), @idade int -- declara as variáveis 
+    BEGIN
+        SET @nome = 'Arthur Almeida' -- SET insere valor MANUALMENTE nas variáveis 
+        SET @idade = 19
+        PRINT @nome -- PRINT mostra o valor inserido nas variáveis 
+        PRINT @idade
+    END
+
+EXEC sp_procedure_simples -- executa a procedure
+GO -- uso de GO evita loop infinito
+
+CREATE OR ALTER PROCEDURE sp_procedure_pk_jogador AS -- da pra usar variáveis sendo campos do próprio banco de dados numa procedure
+    DECLARE @nome varchar(255), @clube varchar(255)
+    BEGIN
+        SELECT @nome = j.Nome, @clube = c.Nome from Jogador j join Clube c on ID_Clube = FK_ID_Clube where j.ID_Jogador = 2 
+        PRINT 'Nome do Jogador: ' + @nome
+        PRINT 'Clube do Jogador: ' + @clube 
+    END 
+
+EXEC sp_procedure_pk_jogador
