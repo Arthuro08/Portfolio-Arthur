@@ -182,6 +182,7 @@ select c.Nome as 'Clube', COUNT(j.Nome) as 'Qtd de Jogadores' from Jogador j rig
 
 -- ### PROCEDURES
 
+-- PROCEDURE SIMPLES
 CREATE OR ALTER PROCEDURE sp_procedure_simples AS -- inicia a criação da procedure
     DECLARE @nome varchar(255), @idade int -- declara as variáveis 
     BEGIN
@@ -194,6 +195,7 @@ CREATE OR ALTER PROCEDURE sp_procedure_simples AS -- inicia a criação da proce
 EXEC sp_procedure_simples -- executa a procedure
 GO -- uso de GO evita loop infinito
 
+-- PROCEDURE USANDO COLUNAS
 CREATE OR ALTER PROCEDURE sp_procedure_pk_jogador AS -- da pra usar variáveis sendo campos do próprio banco de dados numa procedure
     DECLARE @nome varchar(255), @clube varchar(255)
     BEGIN
@@ -203,3 +205,11 @@ CREATE OR ALTER PROCEDURE sp_procedure_pk_jogador AS -- da pra usar variáveis s
     END 
 
 EXEC sp_procedure_pk_jogador
+
+-- PROCEDURE POR PARÂMETRO
+CREATE OR ALTER PROCEDURE sp_parametro(@id_jogador int) AS -- em caso de procedure com parametro, nao precisa do DECLARE pois a variavel ja é declarada na passagem do parametro. Nunca esqueça de botar o TIPO do campo (int, varchar, etc)
+BEGIN
+    SELECT * from Jogador where ID_Jogador <= @id_jogador
+END
+GO -- usando o GO entre a procedure e o exec vc pode rodar o bloco de codigo inteiro sem quebrar ou dar loop infinito
+EXEC sp_parametro 4 -- o último valor é o parametro que será passado. A procedure vai buscar todos os jogadores que contenham o ID menor ou igual a 4
