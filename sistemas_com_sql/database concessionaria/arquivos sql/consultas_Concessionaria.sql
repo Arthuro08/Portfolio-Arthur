@@ -12,3 +12,5 @@ FROM Marca mar
 join Modelo mod on mod.FK_ID_Marca = mar.ID_Marca
 join Carro car on car.FK_ID_Modelo = mod.ID_Modelo
 join Venda ven on ven.FK_ID_Carro = car.ID_Carro
+
+SELECT * from get_estoque_marca(2)

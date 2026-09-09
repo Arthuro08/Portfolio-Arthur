@@ -1,76 +1,56 @@
 # 🔢 Jogo de Adivinhação em Python
 
 ## 📌 Sobre o Projeto
+Este projeto é um jogo de adivinhação de números para console desenvolvido em Python. O jogador deve descobrir um número secreto gerado aleatoriamente pelo computador no menor número de palpites possível. O jogo conta com múltiplos níveis de dificuldade, um sistema de dicas inteligentes que analisa a proximidade do palpite, persistência de recordes individuais por dificuldade em formato JSON e rastreamento acumulado do tempo total que o usuário passou jogando.
 
-Este projeto é um jogo de adivinhação desenvolvido em Python, onde o jogador deve descobrir um número aleatório dentro de um intervalo definido.
+## 🚀 Funcionalidades
+- **Seleção de Dificuldade:**
+  - **Júnior:** Intervalo de 1 a 50.
+  - **Pleno:** Intervalo de 1 a 100.
+  - **Sênior:** Intervalo de 1 a 500.
+- **Dicas Inteligentes:**
+  - Avisa se o número secreto é maior ("Muito baixo!") ou menor ("Muito alto!").
+  - Alerta especial de proximidade ("Tá quase lá!") quando a distância do palpite para o número é menor que 10.
+- **Quadro de Recordes:** Salva e atualiza automaticamente o recorde de menor número de tentativas para cada um dos 3 níveis de dificuldade.
+- **Rastreamento de Tempo:** Mede e acumula o tempo gasto em cada partida, exibindo o total acumulado em segundos/minutos.
+- **Menu Interativo:** Opções para iniciar partida, consultar recordes, visualizar tempo de jogo e sair.
 
-O jogo possui diferentes níveis de dificuldade, sistema de recordes e controle de tempo total jogado, com armazenamento em arquivos.
+## 🛠️ Tecnologias, Ferramentas e Bibliotecas
+- **Linguagem:** Python 3
+- **Módulos Nativos Utilizados:**
+  - `random`: Geração do número pseudoaleatório através de `randint()`.
+  - `json`: Serialização e desserialização dos recordes estruturados no arquivo `recordes.txt`.
+  - `time`: Medição precisa de timestamps com `time.time()` para cálculo do tempo jogado.
+  - `os`: Limpeza visual do terminal (`cls`).
 
-O objetivo é praticar lógica de programação, manipulação de arquivos e estruturas de controle.
+## 🧠 Conceitos Aplicados
+- **Persistência de Dados Estruturados (JSON):** Leitura (`json.load`) e escrita (`json.dump`) de dicionários em arquivo texto garantindo persistência entre sessões.
+- **Tratamento de Exceções (`try / except`):** Captura defensiva de `ValueError` na conversão de palpites e `FileNotFoundError` na inicialização de arquivos inexistentes.
+- **Dicionários e Chaves Dinâmicas:** Associação das pontuações aos respectivos níveis ("Junior", "Pleno", "Senior").
+- **Escopo e Variáveis Globais:** Gerenciamento do estado de tempo acumulado (`acumtotal`) e controle de fluxo com retorno de valores.
 
----
-
-## ⚙️ Funcionalidades
-
-- Sistema de níveis de dificuldade (Júnior, Pleno e Sênior)
-- Geração de número aleatório a cada partida
-- Dicas inteligentes (alto, baixo ou "quase lá")
-- Contagem de tentativas
-- Sistema de recordes por nível
-- Registro de tempo total jogado
-- Menu interativo no terminal
-
----
-
-## 🧠 Regras do Jogo
-
-- Escolha um nível:
-  - **Júnior** → número entre 1 e 50  
-  - **Pleno** → número entre 1 e 100  
-  - **Sênior** → número entre 1 e 500  
-
-- A cada tentativa:
-  - O jogo informa se o número é maior ou menor
-  - Dicas extras aparecem quando você está próximo
-
-- O objetivo é:
-  - Acertar o número com o menor número de tentativas possível
-
-- O sistema salva:
-  - 🏆 Melhor número de tentativas por nível  
-  - ⏱ Tempo total acumulado de jogo  
-
----
-
-## 🏗 Estrutura do Código
-
-O projeto utiliza:
-
-- `random` → geração do número aleatório  
-- `json` → armazenamento dos recordes  
-- `time` → controle de tempo jogado  
-- `os` → limpeza do terminal  
-
-### Principais funções:
-
-- `jogar(dif)` → executa uma partida  
-- `recordes()` → salva e atualiza recordes  
-- `viewrecordes()` → exibe recordes  
-- `viewtempo()` → mostra tempo total jogado  
-- `calctempo()` → calcula e salva o tempo acumulado  
-
----
-
-## 💾 Arquivos Gerados
-
-- `recordes.txt` → armazena os melhores resultados por nível  
-- `tempo.txt` → guarda o tempo total jogado  
-
----
+## 📂 Estrutura do Projeto
+```text
+jogo adivinha/
+│
+├── adivinha.py      # Código-fonte principal com a mecânica do jogo, recordes e menus
+├── recordes.txt    # Arquivo de persistência contendo o menor número de tentativas por nível (JSON)
+└── tempo.txt       # Arquivo de persistência com o tempo total jogado acumulado em segundos
+```
 
 ## ▶️ Como Executar
 
-1. Execute o arquivo:
+### 1. Pré-requisitos
+- Python 3.8+ instalado.
 
+### 2. Execução
+No terminal, entre na pasta do projeto e execute:
 ```bash
-python nome_do_arquivo.py
+python adivinha.py
+```
+
+### 3. Como Jogar
+1. Escolha a opção `1` para iniciar uma partida.
+2. Selecione a dificuldade desejada (Júnior, Pleno ou Sênior).
+3. Insira seus palpites guiando-se pelas dicas exibidas pelo sistema até acertar.
+4. Consulte seus recordes a qualquer momento através da opção `2` do menu principal.

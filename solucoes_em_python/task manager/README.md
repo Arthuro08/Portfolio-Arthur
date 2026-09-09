@@ -1,62 +1,48 @@
 # ✅ Gerenciador de Tarefas em Python
 
 ## 📌 Sobre o Projeto
+Este projeto é uma aplicação de gerenciamento de tarefas (*To-Do List*) para terminal desenvolvida em Python. O sistema permite criar, visualizar e excluir tarefas pendentes com indexação dinâmica, além de oferecer suporte à persistência em arquivo de texto plano (`tarefas.txt`), permitindo que o usuário salve e recupere suas anotações entre diferentes execuções do programa.
 
-Este projeto é um gerenciador de tarefas simples desenvolvido em Python para execução no terminal.
+## 🚀 Funcionalidades
+- **Adicionar Tarefas:** Inserção de novos itens na lista de afazeres em memória.
+- **Listar Tarefas:** Exibição enumerada de todas as tarefas cadastradas no momento.
+- **Remover Tarefas:** Exclusão de itens pelo índice correspondente apresentado na listagem.
+- **Salvar Lista:** Gravação das tarefas ordenadas em arquivo local (`tarefas.txt`).
+- **Carregar Lista:** Leitura e importação de tarefas previamente salvas direto para a memória da aplicação.
+- **Menu Interativo:** Navegação simplificada por terminal com atualização de tela.
 
-Ele permite adicionar, listar, remover e salvar tarefas em um arquivo, funcionando como uma lista de afazeres básica.
+## 🛠️ Tecnologias, Ferramentas e Bibliotecas
+- **Linguagem:** Python 3 (Python 3.10+ recomendado pelo uso de `match-case`)
+- **Módulos Nativos Utilizados:**
+  - `os`: Limpeza do terminal (`os.system("cls")`) a cada iteração do menu principal.
 
-O objetivo é praticar manipulação de listas, arquivos e estruturas de controle.
+## 🧠 Conceitos Aplicados
+- **Manipulação de Coleções Dinâmicas:** Uso de listas (`list`) com operações de inserção (`append`), remoção por índice (`pop`) e limpeza (`clear`).
+- **Persistência de Dados em Arquivo de Texto:** Uso de gerenciadores de contexto (`with open(...)`) nos modos de escrita (`'w'`) e leitura (`'r'`).
+- **Tratamento de Exceções (`try / except`):** Captura segura de `FileNotFoundError` ao tentar carregar a lista antes de um arquivo ter sido criado.
+- **Estruturas de Seleção:** Organização das rotas do menu através da diretiva `match-case`.
 
----
-
-## ⚙️ Funcionalidades
-
-- Adicionar tarefas
-- Listar tarefas cadastradas
-- Remover tarefas por índice
-- Salvar tarefas em arquivo
-- Carregar tarefas salvas
-- Menu interativo no terminal
-
----
-
-## 🧠 Regras do Sistema
-
-- As tarefas são armazenadas em uma lista em memória
-- Cada tarefa recebe um número automaticamente
-- A remoção é feita pelo número da tarefa
-- Os dados podem ser salvos em arquivo para persistência
-
----
-
-## 🏗 Estrutura do Código
-
-O projeto utiliza:
-
-- `os` → limpeza do terminal  
-- Lista (`list`) → armazenamento das tarefas  
-- Arquivos `.txt` → persistência dos dados  
-
-### Principais funções:
-
-- `adicionar()` → adiciona uma nova tarefa  
-- `listar()` → exibe todas as tarefas  
-- `remover()` → remove uma tarefa  
-- `salvar()` → salva no arquivo `tarefas.txt`  
-- `carregar()` → carrega tarefas do arquivo  
-
----
-
-## 💾 Arquivo Gerado
-
-- `tarefas.txt` → armazena a lista de tarefas
-
----
+## 📂 Estrutura do Projeto
+```text
+task manager/
+│
+├── gerenciadortarefas.py   # Código-fonte principal com funções do CRUD e laço de execução
+└── tarefas.txt             # Arquivo texto gerado para armazenamento persistente das tarefas
+```
 
 ## ▶️ Como Executar
 
-1. Execute o arquivo:
+### 1. Pré-requisitos
+- Python 3.10+ instalado.
 
-```bash id="z8n2kl"
-python nome_do_arquivo.py
+### 2. Execução
+No terminal, entre na pasta do projeto e execute:
+```bash
+python gerenciadortarefas.py
+```
+
+### 3. Como Utilizar
+1. Digite `1` para adicionar novas tarefas.
+2. Digite `2` para visualizar a lista com seus respectivos números identificadores.
+3. Digite `3` e insira o número correspondente para remover uma tarefa concluída.
+4. Digite `5` para gravar suas tarefas em `tarefas.txt` e `4` para recarregá-las futuramente.
