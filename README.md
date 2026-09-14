@@ -1,6 +1,6 @@
 # 💼 Portfólio de Projetos - Arthur Almeida
 
-Bem-vindo ao meu repositório central de projetos e estudos em desenvolvimento de software, engenharia de dados e inteligência artificial! Aqui estão reunidos projetos desenvolvidos ao longo da minha trajetória acadêmica — iniciada no curso técnico em **Desenvolvimento de Sistemas na ETEC de Taboão da Serra** (2022–2024) e continuada no bacharelado em **Sistemas de Informação no IFSP Campus São Paulo** (2025–2028) —, além de projetos pessoais externos desenvolvidos para produção e pesquisa.
+Bem-vindo ao meu repositório central de projetos e estudos em desenvolvimento de software, engenharia de dados e inteligência artificial! Aqui estão reunidos projetos desenvolvidos ao longo da minha trajetória acadêmica, além de projetos pessoais externos desenvolvidos para produção e pesquisa.
 
 O portfólio está organizado em cinco pilares técnicos estruturados:
 
@@ -8,7 +8,7 @@ O portfólio está organizado em cinco pilares técnicos estruturados:
 
 ## 🗂️ Mapeamento dos Projetos
 
-### 🤖 Inteligência Artificial & Machine Learning (Projetos em Destaque)
+### 🤖 Inteligência Artificial & Machine Learning (projetos externos que NÃO estão nesse repositório)
 Aplicações de Ciência de Dados e Aprendizado de Máquina supervisionado, processamento de dados (ETL) e modelagem preditiva com Scikit-Learn.
 
 | Projeto | Descrição | Principais Tecnologias | Link / Repositório |
