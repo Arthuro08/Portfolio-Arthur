@@ -1,12 +1,21 @@
 # 💼 Portfólio de Projetos - Arthur Almeida
 
-Aqui estão reunidos projetos desenvolvidos ao longo da minha trajetória acadêmica e profissional.
+Bem-vindo ao meu repositório central de projetos e estudos em desenvolvimento de software, engenharia de dados e inteligência artificial! Aqui estão reunidos projetos desenvolvidos ao longo da minha trajetória acadêmica — iniciada no curso técnico em **Desenvolvimento de Sistemas na ETEC de Taboão da Serra** (2022–2024) e continuada no bacharelado em **Sistemas de Informação no IFSP Campus São Paulo** (2025–2028) —, além de projetos pessoais externos desenvolvidos para produção e pesquisa.
 
-O repositório é estruturado em quatro grandes pilares técnicos, cada qual com seus próprios projetos e documentações completas:
+O portfólio está organizado em cinco pilares técnicos estruturados:
 
 ---
 
 ## 🗂️ Mapeamento dos Projetos
+
+### 🤖 Inteligência Artificial & Machine Learning (Projetos em Destaque)
+Aplicações de Ciência de Dados e Aprendizado de Máquina supervisionado, processamento de dados (ETL) e modelagem preditiva com Scikit-Learn.
+
+| Projeto | Descrição | Principais Tecnologias | Link / Repositório |
+| :--- | :--- | :--- | :---: |
+| **NayarIA - Previsão de Custos de Carro** | Modelo de Machine Learning supervisionado para precificação e previsão de custos automotivos com base em atributos históricos (modelo, marca, ano, quilometragem). | Python, Scikit-Learn, Pandas, Regressão Linear, Árvores de Decisão, One-Hot Encoding | [🔗 Ver Repositório no GitHub](https://github.com/Arthuro08/NayarIA---Previsao-de-Custos-de-Carro) |
+
+---
 
 ### 🗄️ Sistemas com SQL & Business Intelligence (`sistemas_com_sql/`)
 Aplicações de banco de dados relacional (Microsoft SQL Server / T-SQL), modelagens conceituais e lógicas, rotinas programáveis e dashboards analíticos no Power BI.
@@ -45,23 +54,25 @@ Projetos explorando a versatilidade do ecossistema Python: automações, jogos d
 
 ---
 
-### 🌐 Aplicações Web Front-End & APIs (`websites/`)
-Projetos voltados para interfaces de usuário, design responsivo, consumo assíncrono de Web Services REST e portfólio visual.
+### 🌐 Aplicações Web Front-End, APIs & Deploy (`websites/` & Projetos Live)
+Projetos voltados para interfaces de usuário, design responsivo, consumo assíncrono de Web Services REST e deploys em nuvem.
 
-| Projeto | Descrição | Principais Tecnologias | Documentação |
+| Projeto | Descrição | Principais Tecnologias | Links de Acesso |
 | :--- | :--- | :--- | :---: |
-| **Consumo de API ViaCEP** | Aplicação web com Bootstrap (Dark Theme) que consulta e formata endereços consumindo a API pública do ViaCEP. | HTML5, CSS3, JavaScript ES6+, Fetch API, Bootstrap | [Acessar README](websites/consumo_api_cep/README.md) |
+| **Consultor de CEP (Deploy Vercel)** | Aplicação web para consulta e localização de endereços consumindo a API ViaCEP em tempo real, hospedada em nuvem. | HTML5, CSS3, JavaScript ES6+, Bootstrap 5, Fetch API, Vercel | [🌐 Acessar Projeto Online](https://consultor-de-cep-eight.vercel.app/) • [🔗 Repositório](https://github.com/Arthuro08/Consultor-de-CEP) |
+| **Consumo de API ViaCEP (Local)** | Versão local da aplicação web com Bootstrap Dark Theme e consumo assíncrono. | HTML5, CSS3, JavaScript ES6+, Fetch API, Bootstrap | [Acessar README](websites/consumo_api_cep/README.md) |
 | **Web Portfólio Pessoal** | Website institucional com apresentação profissional, timeline acadêmica, animações e gráfico com Chart.js. | HTML5, CSS3 Responsivo, JavaScript, Chart.js, ScrollReveal | [Acessar README](websites/site_sobre_mim/README.md) |
 
 ---
 
 ## 🛠️ Stack Tecnológica Geral do Portfólio
 
-- **Linguagens de Programação:** C, Python, JavaScript, T-SQL (SQL Server)
-- **Front-End & UI:** HTML5, CSS3, Bootstrap 5, Chart.js, ScrollReveal
+- **Linguagens de Programação:** Python, C, JavaScript (ES6+), T-SQL (SQL Server)
+- **Machine Learning & Inteligência Artificial:** Scikit-Learn (`sklearn`), Regressão Linear, Árvores de Decisão, Pandas, Engenharia de Features (One-Hot Encoding, train/test split)
+- **Front-End & UI:** HTML5 semântico, CSS3 responsivo, Bootstrap 5, Chart.js, ScrollReveal
 - **Back-End & Frameworks:** Flask, pyodbc
 - **Bancos de Dados & BI:** Microsoft SQL Server, Power BI Desktop, MySQL
-- **Ferramentas de Desenvolvimento:** Visual Studio Code, Git, GitHub, SSMS
+- **DevOps, Nuvem & Ferramentas:** Vercel (Cloud Deploy & CI/CD), Git, GitHub, Visual Studio Code, SSMS
 
 ---
 

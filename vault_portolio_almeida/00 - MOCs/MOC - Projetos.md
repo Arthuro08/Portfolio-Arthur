@@ -11,6 +11,15 @@ Este índice categoriza todos os projetos do repositório por área técnica, re
 
 ---
 
+## 🤖 0. Inteligência Artificial & Machine Learning
+Modelagem preditiva e projetos de aprendizado supervisionado aplicados a dados reais.
+
+| Projeto | Descrição Resumida | Tecnologias | Status |
+| :--- | :--- | :--- | :---: |
+| [[ML - NayarIA Previsao de Custos]] | Previsão e precificação de custos automotivos com Regressão e Árvores. | [[Python]], [[Scikit-Learn]], [[Pandas]] | Em Desenvolvimento |
+
+---
+
 ## 🗄️ 1. Sistemas com SQL & Business Intelligence
 Projetos focados em bancos de dados relacionais [[Microsoft SQL Server]], rotinas procedurais em T-SQL e dashboards no [[Power BI]].
 

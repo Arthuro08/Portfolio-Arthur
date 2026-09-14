@@ -14,6 +14,9 @@ repositorio: "websites/consumo_api_cep"
 ## 📌 Visão Geral
 Aplicação web front-end desenvolvida com HTML5, CSS3, [[Bootstrap]] e [[JavaScript]] moderno (ES6+) para busca dinâmica de endereços e logradouros em todo o território nacional. A aplicação consome de forma assíncrona o Web Service público do **ViaCEP**, atualizando a tela em tempo real sem recarregar a página (*SPA experience*).
 
+- **Aplicação Publicada Online:** [consultor-de-cep-eight.vercel.app](https://consultor-de-cep-eight.vercel.app/)
+- **Repositório Independente no GitHub:** [Arthuro08/Consultor-de-CEP](https://github.com/Arthuro08/Consultor-de-CEP)
+
 ---
 
 ## 🚀 Arquitetura & Fluxo Assíncrono ([[Consumo de APIs REST e Assincronismo]])
