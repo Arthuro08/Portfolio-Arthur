@@ -76,10 +76,3 @@ Projetos voltados para interfaces de usuário, design responsivo, consumo assín
 - **Bancos de Dados & BI:** Microsoft SQL Server, Power BI Desktop, MySQL
 - **DevOps, Nuvem & Ferramentas:** Vercel (Cloud Deploy & CI/CD), Git, GitHub, Visual Studio Code, SSMS
 
----
-
-## 📬 Contato
-
-- **LinkedIn:** [Arthur Almeida](https://www.linkedin.com/)
-- **GitHub:** [Arthuro08](https://github.com/Arthuro08)
-- **E-mail:** [arthuralmeidatj@gmail.com](mailto:arthuralmeidatj@gmail.com)
