@@ -11,10 +11,14 @@
             "id": "7107eddcc29898c8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Visualização em gráfico"
+              "type": "markdown",
+              "state": {
+                "file": "03 - Conceitos/Consumo de APIs REST e Assincronismo.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Consumo de APIs REST e Assincronismo"
             }
           }
         ]
@@ -186,6 +190,9 @@
   },
   "active": "7107eddcc29898c8",
   "lastOpenFiles": [
+    "01 - Projetos/Machine Learning & IA/ML - NayarIA RH Promocoes.md",
+    "00 - MOCs/Home.md",
+    "00 - MOCs/MOC - Conceitos & Fundamentos.md",
     "02 - Tecnologias/Scikit-Learn.md",
     "01 - Projetos/Machine Learning & IA/ML - NayarIA Previsao de Custos.md",
     "01 - Projetos/Machine Learning & IA",
@@ -213,10 +220,7 @@
     "02 - Tecnologias",
     "Bem-vindo.md",
     "01 - Projetos/Websites/Web - Portfolio Arthur Almeida.md",
-    "01 - Projetos/Websites/Web - Consumo API ViaCEP.md",
     "01 - Projetos/Websites",
-    "01 - Projetos/Solucoes em Python/Python - Gerenciador de Tarefas.md",
-    "01 - Projetos/Solucoes em Python/Python - Analise com Pandas.md",
     "01 - Projetos/Solucoes em Python",
     "01 - Projetos/Solucoes em C",
     "01 - Projetos/Sistemas com SQL",

@@ -1,12 +1,41 @@
 {
   "collapse-filter": false,
   "search": "",
-  "showTags": true,
+  "showTags": false,
   "showAttachments": false,
   "hideUnresolved": false,
   "showOrphans": true,
-  "collapse-color-groups": true,
-  "colorGroups": [],
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "python",
+      "color": {
+        "a": 1,
+        "rgb": 2719707
+      }
+    },
+    {
+      "query": "javascript",
+      "color": {
+        "a": 1,
+        "rgb": 16759086
+      }
+    },
+    {
+      "query": "SQL",
+      "color": {
+        "a": 1,
+        "rgb": 393132
+      }
+    },
+    {
+      "query": "c",
+      "color": {
+        "a": 1,
+        "rgb": 13516864
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +46,6 @@
   "repelStrength": 9.6826854402612,
   "linkStrength": 1,
   "linkDistance": 500,
-  "scale": 0.13168724279835325,
+  "scale": 0.7132754626224372,
   "close": true
 }

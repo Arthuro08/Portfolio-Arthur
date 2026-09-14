@@ -14,6 +14,8 @@ Aplicações de Ciência de Dados e Aprendizado de Máquina supervisionado, proc
 | Projeto | Descrição | Principais Tecnologias | Link / Repositório |
 | :--- | :--- | :--- | :---: |
 | **NayarIA - Previsão de Custos de Carro** | Modelo de Machine Learning supervisionado para precificação e previsão de custos automotivos com base em atributos históricos (modelo, marca, ano, quilometragem). | Python, Scikit-Learn, Pandas, Regressão Linear, Árvores de Decisão, One-Hot Encoding | [🔗 Ver Repositório no GitHub](https://github.com/Arthuro08/NayarIA---Previsao-de-Custos-de-Carro) |
+| **NayarIA - RH (People Analytics)** | Modelo de Machine Learning para previsão de promoções de funcionários com base em métricas históricas de desempenho, controle de overfitting e validação com train/test split. | Python, Scikit-Learn, Árvores de Decisão (`DecisionTreeClassifier`), Pandas, Excel (.xlsx), CLI Colorida | [🔗 Ver Repositório no GitHub](https://github.com/Arthuro08/NayarIA---RH) |
+
 
 ---
 

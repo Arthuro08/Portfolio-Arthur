@@ -33,9 +33,9 @@ Este mapa conecta as principais ferramentas e linguagens do portfólio aos proje
 - [[Flask]] (Back-end Web Python)
   - Projeto: [[Database - Ficha Medica]]
 - [[Pandas]] (Manipulação e Análise de Dados)
-  - Projetos: [[Python - Analise com Pandas]], [[ML - NayarIA Previsao de Custos]]
+  - Projetos: [[Python - Analise com Pandas]], [[ML - NayarIA Previsao de Custos]], [[ML - NayarIA RH Promocoes]]
 - [[Scikit-Learn]] (Machine Learning & Modelagem Preditiva)
-  - Projeto: [[ML - NayarIA Previsao de Custos]]
+  - Projetos: [[ML - NayarIA Previsao de Custos]], [[ML - NayarIA RH Promocoes]]
 - [[Bootstrap]] (Design e Componentes Front-End)
   - Projeto: [[Web - Consumo API ViaCEP]]
 - **pyodbc** (Driver de Conexão Python ➔ SQL Server)

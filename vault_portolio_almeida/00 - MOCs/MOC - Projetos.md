@@ -17,6 +17,8 @@ Modelagem preditiva e projetos de aprendizado supervisionado aplicados a dados r
 | Projeto | Descrição Resumida | Tecnologias | Status |
 | :--- | :--- | :--- | :---: |
 | [[ML - NayarIA Previsao de Custos]] | Previsão e precificação de custos automotivos com Regressão e Árvores. | [[Python]], [[Scikit-Learn]], [[Pandas]] | Em Desenvolvimento |
+| [[ML - NayarIA RH Promocoes]] | Classificação e previsão de promoção de colaboradores com Árvores de Decisão. | [[Python]], [[Scikit-Learn]], [[Pandas]] | Concluído |
+
 
 ---
 
