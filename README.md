@@ -65,14 +65,4 @@ Projetos voltados para interfaces de usuário, design responsivo, consumo assín
 | **Consumo de API ViaCEP (Local)** | Versão local da aplicação web com Bootstrap Dark Theme e consumo assíncrono. | HTML5, CSS3, JavaScript ES6+, Fetch API, Bootstrap | [Acessar README](websites/consumo_api_cep/README.md) |
 | **Web Portfólio Pessoal** | Website institucional com apresentação profissional, timeline acadêmica, animações e gráfico com Chart.js. | HTML5, CSS3 Responsivo, JavaScript, Chart.js, ScrollReveal | [Acessar README](websites/site_sobre_mim/README.md) |
 
----
-
-## 🛠️ Stack Tecnológica Geral do Portfólio
-
-- **Linguagens de Programação:** Python, C, JavaScript (ES6+), T-SQL (SQL Server)
-- **Machine Learning & Inteligência Artificial:** Scikit-Learn (`sklearn`), Regressão Linear, Árvores de Decisão, Pandas, Engenharia de Features (One-Hot Encoding, train/test split)
-- **Front-End & UI:** HTML5 semântico, CSS3 responsivo, Bootstrap 5, Chart.js, ScrollReveal
-- **Back-End & Frameworks:** Flask, pyodbc
-- **Bancos de Dados & BI:** Microsoft SQL Server, Power BI Desktop, MySQL
-- **DevOps, Nuvem & Ferramentas:** Vercel (Cloud Deploy & CI/CD), Git, GitHub, Visual Studio Code, SSMS
 
