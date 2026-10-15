@@ -262,7 +262,7 @@ BEGIN
 END
 
 -- TRANSAÇÕES 
-BEGIN TRANSACTION; -- Inicia a transação (basicamente é como se vc estivesse parando o autocommit ao rodar um comando DML. Agora o banco só salva suas alterações se vc der um COMMIT)
+BEGIN TRANSACTION; -- Inicia a transação (basicamente é como se vc estivesse parando o autocommit ao rodar um comando DML, fazendo um rascunho. Agora o banco só salva suas alterações se vc der um COMMIT)
 
 DELETE FROM Jogador -- faz a deleção de todos os jogadores (com a transação ativada (não vai dar autocommit))
 
@@ -270,3 +270,17 @@ SELECT * FROM Jogador -- verifica a alteração feita
 
 ROLLBACK; -- volta as alterações feitas para antes da transação (cancela tudo que foi alterado dentro da transação). 
 -- **LEMBRETE MUITO IMPORTANTE**: O ROLLBACK SÓ VAI FUNCIONAR SE OCORRER ANTES DO COMMIT. O COMMIT SALVA A TRANSAÇÃO E SUAS ALTERAÇÕES FEITAS PERMANENTEMENTE. O ROLLBACK DEVE SER USADO ENQUANTO O TRANSACTION ESTIVER ATIVADO
+
+-- TRANSAÇÕES COM CONDIÇÃO
+BEGIN TRANSACTION
+UPDATE Jogador SET Posicao = 'GOL' WHERE ID_Jogador = 3 -- atualiza a posicao do jogador cujo ID é 3 para GOLEIRO
+IF @@ROWCOUNT = 0 -- @@rowcount conta quantas linhas foram afetadas (x row affected). Nesse caso é uma condição para acontecer caso o numero de linhas afetadas seja igual a 0
+BEGIN
+    ROLLBACK TRANSACTION -- cancela a transação e volta para o estado original
+    PRINT 'JOGADOR NAO ENCONTRADO'
+END
+ELSE
+BEGIN
+    COMMIT TRANSACTION -- salva a transação e manda as alterações para o banco de dados 
+    PRINT 'INFORMACOES ALTERADAS COM SUCESSO! '
+END
