@@ -260,3 +260,13 @@ BEGIN
         END
     END
 END
+
+-- TRANSAÇÕES 
+BEGIN TRANSACTION; -- Inicia a transação (basicamente é como se vc estivesse parando o autocommit ao rodar um comando DML. Agora o banco só salva suas alterações se vc der um COMMIT)
+
+DELETE FROM Jogador -- faz a deleção de todos os jogadores (com a transação ativada (não vai dar autocommit))
+
+SELECT * FROM Jogador -- verifica a alteração feita
+
+ROLLBACK; -- volta as alterações feitas para antes da transação (cancela tudo que foi alterado dentro da transação). 
+-- **LEMBRETE MUITO IMPORTANTE**: O ROLLBACK SÓ VAI FUNCIONAR SE OCORRER ANTES DO COMMIT. O COMMIT SALVA A TRANSAÇÃO E SUAS ALTERAÇÕES FEITAS PERMANENTEMENTE. O ROLLBACK DEVE SER USADO ENQUANTO O TRANSACTION ESTIVER ATIVADO
