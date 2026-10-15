@@ -223,11 +223,26 @@ GO
 EXEC sp_muitos_parametros 10, 'Palmeiras' -- a procedure vai buscar todos os jogadores que possuem o ID Menor ou igual a 10 e que jogam no Palmeiras
 
 -- TRIGGER SIMPLES (mensagem no sistema quando ocorre uma inserção)
-CREATE TRIGGER tg_mensagem -- criação da trigger
-ON Jogador -- o trigger será disparado quando hover alterações na tabela Jogador
-FOR INSERT -- para inserções 
+CREATE OR ALTER TRIGGER tg_delete
+ON Clube 
+FOR DELETE    
 AS
-BEGIN 
-    SET NOCOUNT ON -- configuração para desabilitar aquela contagem de linhas (x rows affected)
-    PRINT 'Jogador adicionado com sucesso!' -- mensagem que vai aparecer no sistema
+BEGIN
+    SET NOCOUNT ON
+    IF EXISTS(SELECT 1 FROM DELETED)
+    BEGIN
+        PRINT 'Clube(s) excluído(s) com sucesso!'
+        IF EXISTS(SELECT 1 FROM Jogador WHERE FK_ID_CLube IN(SELECT ID_CLube FROM DELETED))
+        BEGIN
+            DECLARE @qtd_jogadores int, @qtd_times int
+            SELECT @qtd_jogadores = COUNT(ID_Jogador) FROM Jogador WHERE FK_ID_CLube IN(SELECT ID_CLube FROM DELETED)
+            SELECT @qtd_times = COUNT(DISTINCT ID_CLube) FROM DELETED
+            DELETE FROM Jogador WHERE FK_ID_CLube IN(SELECT ID_CLube FROM DELETED)
+            PRINT CAST(@qtd_jogadores AS VARCHAR(100)) + 'Jogadores de ' +  CAST(@qtd_times AS VARCHAR(100)) + ' time(s) excluídos com sucesso junto ao Clube'
+        END
+        ELSE
+        BEGIN
+            PRINT 'Não havia jogadores a serem excluídos junto a este Clube'
+        END
+    END
 END
