@@ -222,7 +222,21 @@ END
 GO
 EXEC sp_muitos_parametros 10, 'Palmeiras' -- a procedure vai buscar todos os jogadores que possuem o ID Menor ou igual a 10 e que jogam no Palmeiras
 
--- TRIGGER SIMPLES (mensagem no sistema quando ocorre uma inserção)
+
+GO
+-- TRIGGER SIMPLES
+CREATE OR ALTER TRIGGER tg_mensagem
+ON Jogador
+FOR INSERT 
+AS
+BEGIN 
+    SET NOCOUNT ON
+    PRINT 'Jogador adicionado com sucesso!'
+END
+
+
+-- TRIGGER TRATANDO DELEÇÃO DE CLUBE -> DELETA O CLUBE E OS JOGADORES LIGADOS A ESSE CLUBE AUTOMATICAMENTE APÓS DAR O DELETE
+GO
 CREATE OR ALTER TRIGGER tg_delete
 ON Clube 
 FOR DELETE    
