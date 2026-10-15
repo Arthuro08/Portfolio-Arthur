@@ -222,3 +222,12 @@ END
 GO
 EXEC sp_muitos_parametros 10, 'Palmeiras' -- a procedure vai buscar todos os jogadores que possuem o ID Menor ou igual a 10 e que jogam no Palmeiras
 
+-- TRIGGER SIMPLES (mensagem no sistema quando ocorre uma inserção)
+CREATE TRIGGER tg_mensagem -- criação da trigger
+ON Jogador -- o trigger será disparado quando hover alterações na tabela Jogador
+FOR INSERT -- para inserções 
+AS
+BEGIN 
+    SET NOCOUNT ON -- configuração para desabilitar aquela contagem de linhas (x rows affected)
+    PRINT 'Jogador adicionado com sucesso!' -- mensagem que vai aparecer no sistema
+END
