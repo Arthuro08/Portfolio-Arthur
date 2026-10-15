@@ -222,6 +222,7 @@ END
 GO
 EXEC sp_muitos_parametros 10, 'Palmeiras' -- a procedure vai buscar todos os jogadores que possuem o ID Menor ou igual a 10 e que jogam no Palmeiras
 
+-- ### TRIGGERS
 
 GO
 -- TRIGGER SIMPLES
@@ -261,7 +262,9 @@ BEGIN
     END
 END
 
--- TRANSAÇÕES 
+-- ### TRANSAÇÕES (COMMIT E ROLLBACK E SAVEPOINT)
+    
+-- TRANSAÇÃO SIMPLES
 BEGIN TRANSACTION; -- Inicia a transação (basicamente é como se vc estivesse parando o autocommit ao rodar um comando DML, fazendo um rascunho. Agora o banco só salva suas alterações se vc der um COMMIT)
 
 DELETE FROM Jogador -- faz a deleção de todos os jogadores (com a transação ativada (não vai dar autocommit))
@@ -283,4 +286,19 @@ ELSE
 BEGIN
     COMMIT TRANSACTION -- salva a transação e manda as alterações para o banco de dados 
     PRINT 'INFORMACOES ALTERADAS COM SUCESSO! '
+END
+
+-- OUTRA TRANSAÇÃO COM CONDIÇÃO -> evita time com nome duplicado
+BEGIN TRANSACTION
+INSERT INTO Clube (id_clube, Nome, Cidade, FK_ID_Federacao) VALUES
+(30,'Corinthians', 'São Paulo', 1)
+IF (SELECT COUNT(ID_Clube) FROM Clube WHERE Nome IN ('Corinthians')) > 1
+BEGIN
+    ROLLBACK TRANSACTION
+    PRINT 'Já existe um clube com esse nome'
+END
+ELSE
+BEGIN
+    COMMIT TRANSACTION
+    PRINT 'Clube adicionado com sucesso!'
 END
